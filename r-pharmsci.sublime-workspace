@@ -1,0 +1,798 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "Package Control Messages\n========================\n\nTodoReview:\n----------\n\n  TodoReview 3.0.5\n  --------------------\n  \n  Documentation is at https://github.com/jonathandelgado/SublimeTodoReview\n  As always, please report any issues.\n  \n  \n  This version fixes the UTF-8 file encoding issue. Some files with non-standard were not being properly decoded by python. The plugin now forces UTF-8 encoding to fix this. However, if you are using another encoding, you can now use the `encoding` setting to override the default. Values for this setting can be found in the python file encoding documentation.\n  \n  \n  #3.0.5 - 10/25/14\n  - Doc: `encoding` setting\n  - Add: UTF-8 File Fix (#79, #81, #82, #83)\n",
+			"settings":
+			{
+				"buffer_size": 701,
+				"line_ending": "Unix",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		},
+		{
+			"file": "SUMMARY.md",
+			"settings":
+			{
+				"buffer_size": 732,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_book/index.html",
+			"settings":
+			{
+				"buffer_size": 11751,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 85 files for \"Replace with an introduction\" (regex)\n\n/Users/devinpastoor/Repos/r-pharmsciences/README.md:\n    2  #### by Your Name\n    3  \n    4: Replace with an introduction of your book.\n    5  \n\n/Users/devinpastoor/Repos/r-pharmsciences/_book/index.html:\n    7          <title>Introduction | Book Title</title>\n    8          <meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">\n    9:         <meta name=\"description\" content=\"Replace with an introduction of your book.\">\n   10          <meta name=\"generator\" content=\"GitBook 1.1.1\">\n   11          <meta name=\"HandheldFriendly\" content=\"true\"/>\n   ..\n  337                          <h1 id=\"book-title\">Book Title</h1>\n  338  <h4 id=\"by-your-name\">by Your Name</h4>\n  339: <p>Replace with an introduction of your book.</p>\n  340  \n  341                      \n\n3 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 865,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 741,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 374.0,
+		"selected_items":
+		[
+			[
+				"syn n",
+				"Set Syntax: nm7"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 489.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/devinpastoor/Repos/r-pharmsciences"
+	],
+	"file_history":
+	[
+		"/Users/devinpastoor/Repos/r-pharmsciences/apply-functions/apply-functions.Rmd",
+		"/Users/devinpastoor/Repos/r-pharmsciences/core-r/core-r.Rmd",
+		"/Users/devinpastoor/Repos/nonmem-scratch/iv_oral/nonmem/run002.mod",
+		"/Users/devinpastoor/Repos/nonmem-scratch/iv_oral/run002.mod",
+		"/Users/devinpastoor/Repos/nonmem-scratch/iv_oral/run001.mod",
+		"/Users/devinpastoor/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/devinpastoor/Repos/vpc/.gitignore",
+		"/Users/devinpastoor/Downloads/PP3 assignment (2).R",
+		"/Users/devinpastoor/Dropbox (Personal)/pharmacometrics_related/AdvancedNONMEMworkshop/wexample6/w1bt.ctl",
+		"/Users/devinpastoor/Dropbox (Personal)/pharmacometrics_related/AdvancedNONMEMworkshop/wexample6/wexample12_9.ctl",
+		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod.dir.1/NM_run1/nmpathlist.txt",
+		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod.dir.1/NM_run1/locfile.set",
+		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod.dir.1/NM_run1/FMSG",
+		"/Users/devinpastoor/Desktop/nonmem/mac_mavericks_install_notes.txt",
+		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod.dir.1/NM_run1/psn-1.lst",
+		"/Users/devinpastoor/install_nonmem/PsN-Source/psn_setup.pl",
+		"/Users/devinpastoor/install_nonmem/additional scripts/config.sh",
+		"/Users/devinpastoor/Dropbox (Personal)/nm730CD/install_Darwin",
+		"/Volumes/nonmem730/mac_mavericks_install_notes.txt",
+		"/Users/devinpastoor/vivitrol_report/nonmem/model_development/run6000cov.lst",
+		"/Users/devinpastoor/OneDrive/software/Adobe InDesign CS6 Mac Os X - Cool Release/C.R. Patch/Adobe CS6 Multi Product Activator Mac OS X [C.R.]/Keygen Method/Read Me [C.R.].txt",
+		"/Users/devinpastoor/Documents/all731/MK-0476__singulair__pop_PK_evaluation_Japanese_pediatrics_based_on_PN520/P520_PPK_qPharmetra/Readme.txt",
+		"/Users/devinpastoor/Documents/all731/MK-0476__singulair__pop_PK_evaluation_Japanese_pediatrics_based_on_PN520/P520_PPK_qPharmetra/Release_Final_Deliverable_09Apr2014/WorkArea/NONMEM/run3.lst",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data4/modeling/run100.mod",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data4/modeling/run102.mod",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data4/modeling/run103.mod",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data5/final_backward.lst",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/Data/Data1/run135.mod",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data3_all/modeling/run103.mod",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data2/modeling/run005.mod.dir.1/NM_run1/psn_nonmem_error_messages.txt",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data2/modeling/run005.mod.dir.1/NM_run1/psn-1.lst",
+		"/Users/devinpastoor/Documents/data2/modeling/scm_dir2/base_modelfit_dir1/NM_run1/ph12pk10.nmdat",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data2/modeling/run003.mod",
+		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data2/modeling/run005.mod",
+		"/Volumes/WININSTALL/all_merck/Data/data4/configSCMfin.scm",
+		"/Volumes/WININSTALL/all_merck/Data/data4/final_backward_1.mod",
+		"/Volumes/WININSTALL/all_merck/real_data/data4/modeling/run103.mod",
+		"/Volumes/WININSTALL/all_merck/real_data/data4/modeling/run101.mod",
+		"/Volumes/WININSTALL/all_merck/real_data/data4/sm_short_scmlog.txt",
+		"/Volumes/WININSTALL/all_merck/real_data/data4/sm_scmlog.txt",
+		"/Volumes/WININSTALL/all_merck/real_data/data4/modeling/configSCMfin.scm",
+		"/Users/devinpastoor/Downloads/Unit+2+Module+4.txt",
+		"/Users/devinpastoor/Dropbox (Personal)/programs/Activator/README.txt",
+		"/Users/devinpastoor/Documents/NONMEM_Model_Library/Models/run112.mod",
+		"/Users/devinpastoor/OneDrive/software/Adobe InDesign CS6 Mac Os X - Cool Release/Instructions By Cool Release.txt",
+		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod",
+		"/Volumes/Win81AIO-x64-en-US-Nov2013/Win81-pkeys.txt",
+		"/Users/devinpastoor/install_nonmem/install_nonmem.sh",
+		"/Users/devinpastoor/Documents/exercise/contpkpd/example/warf.ctl",
+		"/Users/devinpastoor/Documents/exercise/indpopmodels/solution/qt/ctl/2.ctl",
+		"/Users/devinpastoor/Documents/exercise/indpopmodels/solution/qt/ctl/1.ctl",
+		"/Users/devinpastoor/Documents/exercise/indpopmodels/solution/qt/ctl/3.ctl",
+		"/Users/devinpastoor/Documents/NONMEM_Model_Library/Models/run35.mod",
+		"/Users/devinpastoor/Documents/NONMEM_Model_Library/Models/run33.mod",
+		"/Users/devinpastoor/Documents/all731/MK-0476__singulair__pop_PK_evaluation_Japanese_pediatrics_based_on_PN520/P520_PPK_qPharmetra/Release_Final_Deliverable_09Apr2014/WorkArea/NONMEM/run13.mod",
+		"/Users/devinpastoor/Documents/all731/MK-0476__singulair__pop_PK_evaluation_Japanese_pediatrics_based_on_PN520/P520_PPK_qPharmetra/Release_Final_Deliverable_09Apr2014/WorkArea/NONMEM/run7.mod",
+		"/Volumes/WININSTALL/Pharmetheus_FinalTransfer/Pharmetheus_FinalTransfer/full_translational_linear/run30.lst",
+		"/Volumes/WININSTALL/MK-5172-HCV-Viral_Dynamics-P004-with_Metrum/MK-5172_P004/5172_mono/3200.ctl",
+		"/Volumes/WININSTALL/MK-5172-HCV-Viral_Dynamics-P004-with_Metrum/MK-5172_P004/5172_mono/worker1/parallel.pnm",
+		"/Volumes/WININSTALL/MK-5172-HCV-Viral_Dynamics-P004-with_Metrum/MK-5172_P004/NMBAYES_5172/1092_-_AUC/1092.ctl",
+		"/Users/devinpastoor/Documents/merck/real_data/data2/modeling/run001.lst",
+		"/Users/devinpastoor/Documents/sse_noetaka/sse_mag0_2/n100/sse_l_n100ncov10.e1223757",
+		"/Users/devinpastoor/Documents/sse_noetaka/sse_mag0_2/n100/sse_n100ncov10/m1/mc-alt_1-5.mod",
+		"/Users/devinpastoor/install_nonmem/nm730CD_essential/mpich2/README_vin.mht",
+		"/Users/devinpastoor/install_nonmem/nm730CD_essential/install_Darwin",
+		"/Users/devinpastoor/Downloads/config_emax_and_other_parameterizations.scm",
+		"/Users/devinpastoor/OneDrive/PKPDstick_72_UMD/nm_7.2.0_g/license/nonmem.lic",
+		"/Users/devinpastoor/R_test.ipynb",
+		"/Users/devinpastoor/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/devinpastoor/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/devinpastoor/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/devinpastoor/Desktop/nm_7.2.0_g/nonmem.lic"
+	],
+	"find":
+	{
+		"height": 22.0
+	},
+	"find_in_files":
+	{
+		"height": 91.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Replace with an introduction",
+			"004",
+			"003",
+			" ",
+			"6002",
+			"THETA(",
+			"\\s",
+			"\\d",
+			"\\s",
+			"\\d",
+			"\\s",
+			"\\d",
+			"*(WT/40)",
+			"EXP\\(ETA\\(\\d\\)\\)",
+			"NO. IN",
+			"/tmp60days/pastoor/sse_var70"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 701,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								604,
+								604
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "SUMMARY.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 732,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								41,
+								41
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_book/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4557.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 865,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										156,
+										184
+									],
+									[
+										456,
+										484
+									],
+									[
+										756,
+										784
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"detect_indentation": false,
+							"incomplete_sync": null,
+							"line_numbers": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 741,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								741,
+								741
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 92.0
+	},
+	"project": "r-pharmsci.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Repos/phar601/PP_data_creation/simulations/run002.mod"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 227.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

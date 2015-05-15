@@ -1,0 +1,4 @@
+# R for Pharmaceutical Sciences
+#### by Devin Pastoor
+
+This book is a sum of pouring over dozens of books, countless blogs, and many projects as I developed my own R skills and toolbox. While there are extensive resources available to learn R, two patterns I noticed were: a) most material was very general, forcing a constant 'translation' into datasets or problems faced when dealing with problems specific to pharmaceutical sciences (and in my case, specifically, pharmacometrics) and b) a lot of the scientific examples are quite outdated or take the 'long way around' to get to a solution. This is my attempt to modernize and inform by bringing together the core topics I believe can make someone a successful and productive user of R. 
