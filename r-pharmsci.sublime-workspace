@@ -3,67 +3,144 @@
 	{
 		"selected_items":
 		[
+			[
+				"par",
+				"parseFloat           (fn)  [E]"
+			],
+			[
+				"Trac",
+				"Tracker.autorun	Meteor: Tracker.autorun(runFunc)"
+			],
+			[
+				"ren",
+				"rendered	Meteor: Template.myTemplate.rendered = function ( ) { ... }"
+			],
+			[
+				"take",
+				"takebuf_string"
+			],
+			[
+				"header",
+				"headerrow"
+			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "Package Control Messages\n========================\n\nTodoReview:\n----------\n\n  TodoReview 3.0.5\n  --------------------\n  \n  Documentation is at https://github.com/jonathandelgado/SublimeTodoReview\n  As always, please report any issues.\n  \n  \n  This version fixes the UTF-8 file encoding issue. Some files with non-standard were not being properly decoded by python. The plugin now forces UTF-8 encoding to fix this. However, if you are using another encoding, you can now use the `encoding` setting to override the default. Values for this setting can be found in the python file encoding documentation.\n  \n  \n  #3.0.5 - 10/25/14\n  - Doc: `encoding` setting\n  - Add: UTF-8 File Fix (#79, #81, #82, #83)\n",
+			"file": "r-pharmsci.sublime-project",
 			"settings":
 			{
-				"buffer_size": 701,
-				"line_ending": "Unix",
-				"name": "Package Control Messages",
-				"scratch": true
-			}
-		},
-		{
-			"file": "SUMMARY.md",
-			"settings":
-			{
-				"buffer_size": 732,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_book/index.html",
-			"settings":
-			{
-				"buffer_size": 11751,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "Searching 85 files for \"Replace with an introduction\" (regex)\n\n/Users/devinpastoor/Repos/r-pharmsciences/README.md:\n    2  #### by Your Name\n    3  \n    4: Replace with an introduction of your book.\n    5  \n\n/Users/devinpastoor/Repos/r-pharmsciences/_book/index.html:\n    7          <title>Introduction | Book Title</title>\n    8          <meta content=\"text/html; charset=utf-8\" http-equiv=\"Content-Type\">\n    9:         <meta name=\"description\" content=\"Replace with an introduction of your book.\">\n   10          <meta name=\"generator\" content=\"GitBook 1.1.1\">\n   11          <meta name=\"HandheldFriendly\" content=\"true\"/>\n   ..\n  337                          <h1 id=\"book-title\">Book Title</h1>\n  338  <h4 id=\"by-your-name\">by Your Name</h4>\n  339: <p>Replace with an introduction of your book.</p>\n  340  \n  341                      \n\n3 matches across 2 files\n",
-			"settings":
-			{
-				"buffer_size": 865,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
-			"file": "README.md",
-			"settings":
-			{
-				"buffer_size": 741,
+				"buffer_size": 45,
 				"line_ending": "Unix"
 			}
 		}
 	],
 	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Vintageous/Vintageous.sublime-build",
+					""
+				],
+				[
+					"Packages/Vintageous/Vintageous.sublime-build",
+					"Vintageous - Test (All)"
+				],
+				[
+					"Packages/Vintageous/Vintageous.sublime-build",
+					"Vintageous - Test (This File Only)"
+				]
+			],
+			[
+				"Packages/Vintageous/Vintageous.sublime-build",
+				"Vintageous - Test (This File Only)"
+			]
+		]
+	],
+	"build_varint": "",
 	"command_palette":
 	{
 		"height": 374.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"syn n",
-				"Set Syntax: nm7"
+				"sy java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Add Channel"
+			],
+			[
+				"iju",
+				"Sublime-IJulia: Open New IJulia Console"
+			],
+			[
+				"ij",
+				"Sublime-IJulia: Open New IJulia Console"
+			],
+			[
+				"ijulia",
+				"Sublime-IJulia: Open New IJulia Console"
+			],
+			[
+				"sublim",
+				"Sublime-IJulia: Enter"
+			],
+			[
+				"open iju",
+				"Sublime-IJulia: Open New IJulia Console"
+			],
+			[
+				"open ij",
+				"Sublime-IJulia: Open New IJulia Console"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"syn ju",
+				"Set Syntax: Julia"
+			],
+			[
+				"sy ju",
+				"Set Syntax: Julia"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
 			],
 			[
 				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"install package ",
 				"Package Control: Install Package"
 			],
 			[
@@ -71,22 +148,34 @@
 				"Package Control: List Packages"
 			],
 			[
-				"install",
+				"packa in",
 				"Package Control: Install Package"
 			],
 			[
-				"instal",
-				"Package Control: Install Package"
+				"diff",
+				"Git: Diff"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"uni",
+				"Permute Lines: Unique"
+			],
+			[
+				"perm",
+				"Permute Lines: Unique"
 			]
 		],
-		"width": 489.0
+		"width": 600.0
 	},
 	"console":
 	{
-		"height": 126.0,
+		"height": 110.0,
 		"history":
 		[
-			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
 		]
 	},
 	"distraction_free":
@@ -100,86 +189,124 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/devinpastoor/Repos/r-pharmsciences"
+		"/C/Users/devin/Documents/Repos/r-pharmsciences"
 	],
 	"file_history":
 	[
-		"/Users/devinpastoor/Repos/r-pharmsciences/apply-functions/apply-functions.Rmd",
-		"/Users/devinpastoor/Repos/r-pharmsciences/core-r/core-r.Rmd",
-		"/Users/devinpastoor/Repos/nonmem-scratch/iv_oral/nonmem/run002.mod",
-		"/Users/devinpastoor/Repos/nonmem-scratch/iv_oral/run002.mod",
-		"/Users/devinpastoor/Repos/nonmem-scratch/iv_oral/run001.mod",
-		"/Users/devinpastoor/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
-		"/Users/devinpastoor/Repos/vpc/.gitignore",
-		"/Users/devinpastoor/Downloads/PP3 assignment (2).R",
-		"/Users/devinpastoor/Dropbox (Personal)/pharmacometrics_related/AdvancedNONMEMworkshop/wexample6/w1bt.ctl",
-		"/Users/devinpastoor/Dropbox (Personal)/pharmacometrics_related/AdvancedNONMEMworkshop/wexample6/wexample12_9.ctl",
-		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod.dir.1/NM_run1/nmpathlist.txt",
-		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod.dir.1/NM_run1/locfile.set",
-		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod.dir.1/NM_run1/FMSG",
-		"/Users/devinpastoor/Desktop/nonmem/mac_mavericks_install_notes.txt",
-		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod.dir.1/NM_run1/psn-1.lst",
-		"/Users/devinpastoor/install_nonmem/PsN-Source/psn_setup.pl",
-		"/Users/devinpastoor/install_nonmem/additional scripts/config.sh",
-		"/Users/devinpastoor/Dropbox (Personal)/nm730CD/install_Darwin",
-		"/Volumes/nonmem730/mac_mavericks_install_notes.txt",
-		"/Users/devinpastoor/vivitrol_report/nonmem/model_development/run6000cov.lst",
-		"/Users/devinpastoor/OneDrive/software/Adobe InDesign CS6 Mac Os X - Cool Release/C.R. Patch/Adobe CS6 Multi Product Activator Mac OS X [C.R.]/Keygen Method/Read Me [C.R.].txt",
-		"/Users/devinpastoor/Documents/all731/MK-0476__singulair__pop_PK_evaluation_Japanese_pediatrics_based_on_PN520/P520_PPK_qPharmetra/Readme.txt",
-		"/Users/devinpastoor/Documents/all731/MK-0476__singulair__pop_PK_evaluation_Japanese_pediatrics_based_on_PN520/P520_PPK_qPharmetra/Release_Final_Deliverable_09Apr2014/WorkArea/NONMEM/run3.lst",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data4/modeling/run100.mod",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data4/modeling/run102.mod",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data4/modeling/run103.mod",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data5/final_backward.lst",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/Data/Data1/run135.mod",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data3_all/modeling/run103.mod",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data2/modeling/run005.mod.dir.1/NM_run1/psn_nonmem_error_messages.txt",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data2/modeling/run005.mod.dir.1/NM_run1/psn-1.lst",
-		"/Users/devinpastoor/Documents/data2/modeling/scm_dir2/base_modelfit_dir1/NM_run1/ph12pk10.nmdat",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data2/modeling/run003.mod",
-		"/Users/devinpastoor/Dropbox (Personal)/merck/real_data/data2/modeling/run005.mod",
-		"/Volumes/WININSTALL/all_merck/Data/data4/configSCMfin.scm",
-		"/Volumes/WININSTALL/all_merck/Data/data4/final_backward_1.mod",
-		"/Volumes/WININSTALL/all_merck/real_data/data4/modeling/run103.mod",
-		"/Volumes/WININSTALL/all_merck/real_data/data4/modeling/run101.mod",
-		"/Volumes/WININSTALL/all_merck/real_data/data4/sm_short_scmlog.txt",
-		"/Volumes/WININSTALL/all_merck/real_data/data4/sm_scmlog.txt",
-		"/Volumes/WININSTALL/all_merck/real_data/data4/modeling/configSCMfin.scm",
-		"/Users/devinpastoor/Downloads/Unit+2+Module+4.txt",
-		"/Users/devinpastoor/Dropbox (Personal)/programs/Activator/README.txt",
-		"/Users/devinpastoor/Documents/NONMEM_Model_Library/Models/run112.mod",
-		"/Users/devinpastoor/OneDrive/software/Adobe InDesign CS6 Mac Os X - Cool Release/Instructions By Cool Release.txt",
-		"/Users/devinpastoor/Repos/phar601/PP_data_creation/simulations/run001.mod",
-		"/Volumes/Win81AIO-x64-en-US-Nov2013/Win81-pkeys.txt",
-		"/Users/devinpastoor/install_nonmem/install_nonmem.sh",
-		"/Users/devinpastoor/Documents/exercise/contpkpd/example/warf.ctl",
-		"/Users/devinpastoor/Documents/exercise/indpopmodels/solution/qt/ctl/2.ctl",
-		"/Users/devinpastoor/Documents/exercise/indpopmodels/solution/qt/ctl/1.ctl",
-		"/Users/devinpastoor/Documents/exercise/indpopmodels/solution/qt/ctl/3.ctl",
-		"/Users/devinpastoor/Documents/NONMEM_Model_Library/Models/run35.mod",
-		"/Users/devinpastoor/Documents/NONMEM_Model_Library/Models/run33.mod",
-		"/Users/devinpastoor/Documents/all731/MK-0476__singulair__pop_PK_evaluation_Japanese_pediatrics_based_on_PN520/P520_PPK_qPharmetra/Release_Final_Deliverable_09Apr2014/WorkArea/NONMEM/run13.mod",
-		"/Users/devinpastoor/Documents/all731/MK-0476__singulair__pop_PK_evaluation_Japanese_pediatrics_based_on_PN520/P520_PPK_qPharmetra/Release_Final_Deliverable_09Apr2014/WorkArea/NONMEM/run7.mod",
-		"/Volumes/WININSTALL/Pharmetheus_FinalTransfer/Pharmetheus_FinalTransfer/full_translational_linear/run30.lst",
-		"/Volumes/WININSTALL/MK-5172-HCV-Viral_Dynamics-P004-with_Metrum/MK-5172_P004/5172_mono/3200.ctl",
-		"/Volumes/WININSTALL/MK-5172-HCV-Viral_Dynamics-P004-with_Metrum/MK-5172_P004/5172_mono/worker1/parallel.pnm",
-		"/Volumes/WININSTALL/MK-5172-HCV-Viral_Dynamics-P004-with_Metrum/MK-5172_P004/NMBAYES_5172/1092_-_AUC/1092.ctl",
-		"/Users/devinpastoor/Documents/merck/real_data/data2/modeling/run001.lst",
-		"/Users/devinpastoor/Documents/sse_noetaka/sse_mag0_2/n100/sse_l_n100ncov10.e1223757",
-		"/Users/devinpastoor/Documents/sse_noetaka/sse_mag0_2/n100/sse_n100ncov10/m1/mc-alt_1-5.mod",
-		"/Users/devinpastoor/install_nonmem/nm730CD_essential/mpich2/README_vin.mht",
-		"/Users/devinpastoor/install_nonmem/nm730CD_essential/install_Darwin",
-		"/Users/devinpastoor/Downloads/config_emax_and_other_parameterizations.scm",
-		"/Users/devinpastoor/OneDrive/PKPDstick_72_UMD/nm_7.2.0_g/license/nonmem.lic",
-		"/Users/devinpastoor/R_test.ipynb",
-		"/Users/devinpastoor/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
-		"/Users/devinpastoor/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
-		"/Users/devinpastoor/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
-		"/Users/devinpastoor/Desktop/nm_7.2.0_g/nonmem.lic"
+		"/C/Users/devin/Documents/Repos/node-scratch/file-watcher/01-fw.js",
+		"/C/Users/devin/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/devin/Documents/Repos/node-scratch/RTW/02-helloworld.js",
+		"/C/Users/devin/Documents/Repos/node-scratch/RTW/03-hwModule.js",
+		"/C/Users/devin/Documents/Repos/node-scratch/RTW/03-helloworld-async.js",
+		"/C/Users/devin/Documents/Repos/node-scratch/RTW/03-example_asq.js",
+		"/C/Users/devin/Documents/Repos/node-scratch/RTW/03-helloworld.js",
+		"/C/Users/devin/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/devin/Repos/nonmem_examples/Hands_onA/AAruninfo.txt",
+		"/Users/devin/Library/Application Support/Sublime Text 3/Packages/User/Package Control.last-run",
+		"/Users/devin/Repos/meteor-d3-scratch/conctimecsv/public/data/concTimeSmall.csv",
+		"/Users/devin/Repos/neurocrine/initialtodo.md",
+		"/Users/devin/Repos/meteor-d3-scratch/meteor-d3-scratch.sublime-project",
+		"/Users/devin/Repos/meteor-d3-scratch/conctime/conctime.js",
+		"/Users/devin/Repos/meteor-d3-scratch/conctimedb/subs.js",
+		"/Users/devin/Repos/meteor-d3-scratch/crossfilter/flights-3m.json",
+		"/Users/devin/Repos/xml-nonmem/xml2js.js",
+		"/Users/devin/Repos/nonmem_examples/Hands_onB/run1.lst",
+		"/Users/devin/Repos/nonmem-keo/modeling/run001.mod.dir.2/NM_run1/psn.xml",
+		"/Users/devin/Repos/nonmem-scratch/iv_oral/nonmem/run003.mod.dir.1/NM_run1/psn.xml",
+		"/Users/devin/Repos/private_projects/letscodejavascript/scrapper.py",
+		"/Users/devin/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/devin/Library/Application Support/Sublime Text 3/Packages/User/Package Control.sublime-settings",
+		"/Users/devin/Library/Application Support/Sublime Text 3/Packages/test.jl",
+		"/Users/devin/Downloads/sec.prof",
+		"/Users/devin/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/devin/Dropbox/vim/vim-shortcuts.md",
+		"/Users/devin/Dropbox/neurocrine_devin/ppk model/run100.mod",
+		"/Users/devin/Dropbox/all_intern/real_data/data5/run002.mod",
+		"/Users/devin/Dropbox/all_intern/real_data/data5/run001.lst",
+		"/Users/devin/Dropbox/all_intern/real_data/data4/modeling/run100.lst",
+		"/Users/devin/Dropbox/all_intern/real_data/data5/run003.lst",
+		"/Users/devin/Dropbox/all_intern/real_data/data5/final_backward.mod",
+		"/Users/devin/Dropbox/all_intern/real_data/data1_all/mk_migraine/modeling/run102.mod",
+		"/Users/devin/Desktop/acop-r-session",
+		"/Users/devin/Repos/learnrme/website/index.html",
+		"/Users/devin/Repos/julia-zmq/all.jl",
+		"/Users/devin/Repos/julia-zmq/server.jl",
+		"/Users/devin/Repos/julia-zmq/client.jl",
+		"/Users/devin/Repos/julia-zmq/server",
+		"/Users/devin/Library/Application Support/Sublime Text 3/Packages/User/Sublime-IJulia.sublime-settings",
+		"/Users/devin/Library/Application Support/Sublime Text 3/Packages/IJulia/Sublime-IJulia.sublime-settings",
+		"/Users/devin/Dropbox/vim-shortcuts.md",
+		"/Users/devin/Repos/julia-scratch/nonmem_sim_cleaned2.vpc",
+		"/Users/devin/Repos/julia-scratch/nonmem_sim_cleaned.vpc",
+		"/Users/devin/Repos/python-scratch/big_parsed_nss.vpc",
+		"/Users/devin/Repos/python-scratch/parsed_nss.vpc",
+		"/Users/devin/Repos/python-scratch/parsed_nss.csv",
+		"/Users/devin/Repos/python-scratch/nonmem_sim_small.vpc",
+		"/Users/devin/Repos/julia-scratch/nmtable2cleaned",
+		"/Users/devin/Dropbox/Design/Tutorials/Designing-Forms.html",
+		"/Users/devin/Repos/julia-scratch/nmtablecleaned",
+		"/Users/devin/Repos/julia-scratch/nmtable2",
+		"/Users/devin/Repos/julia-scratch/.git/MERGE_MSG",
+		"/Users/devin/Repos/julia-scratch/nmtable.csv",
+		"/Users/devin/Repos/Telescope/.git/MERGE_MSG",
+		"/Users/devin/Repos/test-ws-t1/delta/index.html",
+		"/Users/devin/Desktop/cr.html",
+		"/Users/devin/Repos/PKPDmisc/.git/TAG_EDITMSG",
+		"/Users/devin/Repos/Telescope/collections/posts.js",
+		"/Users/devin/Repos/nonmem-scratch/iv_oral/nonmem/run002.ext",
+		"/Users/devin/Repos/nonmem-scratch/iv_oral/nonmem/run002.mod.dir.1/NM_run1/psn.coi",
+		"/Users/devin/Repos/nonmem-scratch/iv_oral/nonmem/run002.mod.dir.1/NM_run1/psn.cpu",
+		"/Users/devin/Repos/nonmem-scratch/iv_oral/nonmem/run002.mod.dir.1/NM_run1/psn.shm",
+		"/Users/devin/Repos/nonmem-scratch/iv_oral/nonmem/run002.mod.dir.1/NM_run1/psn.xml",
+		"/Users/devin/Dropbox/merck/real_data/data3_all/modeling/run200.mod.dir.1/NM_run1/psn.xml",
+		"/Users/devin/Dropbox/merck/models/dataset3/base_model.lst",
+		"/Users/devin/Dropbox/merck/models/dataset2/run007.lst",
+		"/Users/devin/Dropbox/merck/models/dataset2/final_backward.lst",
+		"/Users/devin/Dropbox/merck/models/dataset3/FFEM_final.lst",
+		"/Users/devin/Dropbox/merck/models/dataset3/final_backward.lst",
+		"/Users/devin/Repos/PKPDmisc.Rcheck/00check.log",
+		"/Users/devin/Repos/PKPDmisc/R/groups.R",
+		"/Users/devin/Repos/PKPDmisc/R/nca.R",
+		"/Users/devin/Repos/PKPDmisc/man/read_csv_wunits.Rd",
+		"/Users/devin/Repos/PKPDmisc/R/read_csv_wunits.R",
+		"/Users/devin/Repos/PKPDmisc/R/s_cmax.R",
+		"/Users/devin/Repos/PKPDmisc/R/s_pauc.R",
+		"/Users/devin/Repos/PKPDmisc/man/s_cmax.Rd",
+		"/Users/devin/Repos/PKPDmisc/man/resample_df.Rd",
+		"/Users/devin/Repos/PKPDmisc/man/read_nonmem_sed.Rd",
+		"/Users/devin/Repos/PKPDmisc/man/read_nonmem.Rd",
+		"/Users/devin/Repos/PKPDmisc/README.md",
+		"/Users/devin/Repos/PKPDmisc/man/replace_list_elements.Rd",
+		"/Users/devin/Repos/PKPDmisc/man/has_ext.Rd",
+		"/Users/devin/Repos/PKPDmisc/R/has_ext.R",
+		"/Users/devin/Repos/PKPDmisc/man/nca.Rd",
+		"/Users/devin/Repos/PKPDmisc/R/nm_comments.R",
+		"/Users/devin/Repos/PKPDmisc/NAMESPACE",
+		"/Users/devin/Repos/PKPDmisc/.Rproj.user/AC55052E/sdb/prop/7D5318EF",
+		"/Users/devin/Repos/PKPDmisc/DESCRIPTION",
+		"/Users/devin/Documents/PsN-Source/lib/tool/scm.pm",
+		"/Users/devin/Dropbox/UMCTM/MS PHMX Course Material/Spring 2015/PHMX 663/Interactive Quiz/BiweekQuiz1/index.md",
+		"/Users/devin/Repos/vpc/R/vpc.R",
+		"/Users/devin/Downloads/rmarkdown-master/inst/rmarkdown/templates/html_vignette/template.yaml",
+		"/Users/devin/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/devin/Repos/rv2/R/ops.R",
+		"/Users/devin/Repos/PKPDdatasets/.git/MERGE_MSG",
+		"/Users/devin/Downloads/themeforest-6434590-fullscreen-photography-portfolio-html5-with-shop/www/js/retina.js",
+		"/Users/devin/Downloads/themeforest-6434590-fullscreen-photography-portfolio-html5-with-shop/www/js/modernizr.js",
+		"/Users/devin/Repos/microscope/client/templates/includes/header.html",
+		"/Users/devin/Repos/uploadexample/readme.md",
+		"/Users/devin/Repos/simple-todos/simple-todos.html",
+		"/Users/devin/Repos/simple-todos/simple-todos.css",
+		"/Users/devin/Repos/simple-todos/simple-todos.js",
+		"/Users/devin/Repos/QPC_old/QPC.R",
+		"/Users/devin/Repos/shiny-curve-stripping/ui.R",
+		"/Users/devin/Repos/shiny-curve-stripping/server.R",
+		"/Users/devin/.zshrc",
+		"/Users/devin/Dropbox/vagrant_nonmem/install_nonmem_psn.sh"
 	],
 	"find":
 	{
-		"height": 22.0
+		"height": 30.0
 	},
 	"find_in_files":
 	{
@@ -194,22 +321,64 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"Replace with an introduction",
-			"004",
-			"003",
-			" ",
-			"6002",
-			"THETA(",
-			"\\s",
-			"\\d",
-			"\\s",
-			"\\d",
-			"\\s",
-			"\\d",
-			"*(WT/40)",
-			"EXP\\(ETA\\(\\d\\)\\)",
-			"NO. IN",
-			"/tmp60days/pastoor/sse_var70"
+			"Add a note",
+			"Read more at location",
+			"Edit",
+			"Add a note",
+			"Read more at",
+			"Delete this highlight",
+			"Add a note",
+			"Read more at location",
+			"Read more at location \\d*",
+			"Read more at location",
+			" Delete this highlight",
+			"Read more at location",
+			"Add a note",
+			"Delete this highlight",
+			"Add a note",
+			"Read more at location",
+			"• Delete this highlight",
+			"TIME",
+			"chart",
+			" [",
+			"reference",
+			"vintage",
+			"-",
+			" -",
+			",",
+			"V",
+			"\"",
+			"	",
+			"\n",
+			"\\n",
+			"^\\n",
+			"\n",
+			"\\n",
+			"\n",
+			"abspath(filename)",
+			"age",
+			"$",
+			"id",
+			"=",
+			"                       ",
+			"                      ",
+			"                     ",
+			"                    ",
+			"                   ",
+			"                  ",
+			"=",
+			"unique",
+			"stringr",
+			"has_ext",
+			"pauc",
+			"simdata",
+			"rdata",
+			"https://s3.amazonaws.com/bio372x2/..+\\.mp4",
+			"https://s3-us-west-2.amazonaws..+\\.mp4",
+			".*/n",
+			".*/n.*/n",
+			"https://s3-us-west-2.amazonaws..+\\.mp4",
+			"value"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -221,202 +390,22 @@
 		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"semi_transient": false,
+					"file": "r-pharmsci.sublime-project",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 701,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								604,
-								604
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "SUMMARY.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 732,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								41,
-								41
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_book/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 11751,
+						"buffer_size": 45,
 						"regions":
 						{
 						},
@@ -432,6 +421,31 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -442,262 +456,44 @@
 								"bh_default_open",
 								"bh_default_close",
 								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
 								"bh_curly",
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
 								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close",
 								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
 								"bh_tag",
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_tag_content"
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
 							],
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 4557.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 865,
-						"regions":
-						{
-							"match":
+							"syntax": "Packages/JavaScript/JSON.tmLanguage",
+							"vintage":
 							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										156,
-										184
-									],
-									[
-										456,
-										484
-									],
-									[
-										756,
-										784
-									]
-								],
-								"scope": ""
+								"action": null,
+								"action_count": "",
+								"mode": "mode_normal",
+								"motion": null,
+								"motion_count": "",
+								"must_capture_register_name": false,
+								"partial_sequence": "",
+								"register": "\"",
+								"sequence": "",
+								"xpos": 0
 							}
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"detect_indentation": false,
-							"incomplete_sync": null,
-							"line_numbers": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "README.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 741,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								741,
-								741
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_angle_content",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_default_content",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_unmatched_content",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_round_content",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_regex_content",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_c_define_content",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_curly_content",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_single_quote_content",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_double_quote_content",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_square_content",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_tag_content"
-							],
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -711,7 +507,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 22.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -740,6 +536,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 201.0
+	},
 	"output.find_results":
 	{
 		"height": 0.0
@@ -748,35 +548,75 @@
 	{
 		"height": 92.0
 	},
+	"pinned_build_system": "Packages/User/node.sublime-build",
 	"project": "r-pharmsci.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 56.0
 	},
 	"save_all_on_build": true,
 	"select_file":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
-				"",
-				"~/Repos/phar601/PP_data_creation/simulations/run002.mod"
+				"conctime.js",
+				"conctimedb/conctime.js"
+			],
+			[
+				"s_cma",
+				"R/s_cmax.R"
+			],
+			[
+				"resamp",
+				"R/resampling_functions.R"
+			],
+			[
+				"read_cs",
+				"R/read_csv_wunits.R"
+			],
+			[
+				"read_csv",
+				"man/read_csv_wunits.Rd"
+			],
+			[
+				"nca.r",
+				"R/nca.R"
+			],
+			[
+				"nca",
+				"man/nca.Rd"
+			],
+			[
+				"has",
+				"R/has_ext.R"
+			],
+			[
+				"group",
+				"R/groups.R"
+			],
+			[
+				"des",
+				"DESCRIPTION"
 			]
 		],
 		"width": 0.0
 	},
 	"select_project":
 	{
-		"height": 500.0,
+		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 380.0
+		"width": 0.0
 	},
 	"select_symbol":
 	{
 		"height": 0.0,
+		"last_filter": "",
 		"selected_items":
 		[
 		],
@@ -785,12 +625,15 @@
 	"selected_group": 0,
 	"settings":
 	{
+		"vintage":
+		{
+		}
 	},
 	"show_minimap": true,
-	"show_open_files": false,
+	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 227.0,
+	"side_bar_width": 305.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
