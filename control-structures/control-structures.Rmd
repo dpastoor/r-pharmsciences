@@ -1,14 +1,29 @@
+---
+output: pdf_document
+---
 ## Control Structors 
 
-Testing Conditions
+
+Have the structure and syntax
 
 ```
-if
-if, else if 
-if, else if, ..., else
+if (<condition>) {
+## do something
+}
 ```
 
-Have the structure
+If you would like the code to also do something if the condition is NOT met, then 
+you can use an else block
+
+```
+if (<condition>) {
+## do something
+} else {
+## do something else
+}
+```
+
+You can also have multiple conditions to check for
 
 ```
 if(condition) {
@@ -16,21 +31,92 @@ if(condition) {
 } else if (conditition2) {
     ## do other stuff
     } else {
-    ## do something in for other condition
+    ## do something for any other condition
 }
 ```
 
-You don't have to use `else` statments
+Even with multiple tests, you don't have to use `else` statments
 
 ```
-if (condition1)
-if (condition2)
-if (condition3)
+if (condition1) ## do something
+if (condition2) ## do something
+if (condition3) ## do something
 ```
 
 is perfectly valid.
 
-* `ifelse` - specialized test with the format `ifelse(Test, Yes, no)`
+### ifelse
+
+
+`ifelse` - specialized test with the format `ifelse(<test condition>, <if yes>, <if no>)`
+
+```{r}
+gender <- c("Male", "Male", "Female")
+
+ismale <- ifelse(gender == "Male", 1, 0)
+
+gender
+ismale
+```
+
+You can even nest ifelse statements
+
+```{r}
+race <- c("white", "black", "hispanic", "asian", "alien")
+
+race_num <- ifelse(race == "white", 1, 
+                   ifelse(race == "black", 2, 
+                          ifelse(race == "hispanic", 3, 4)))
+race
+race_num
+```
+
+Notice that in this technique if none if the `TRUE` conditions are met, it will be assigned
+the value `4`. This is a good practice to make sure you catch all possible values. The last false value should always be used to handle 'all other conditions'. 
+
+For example
+```{r}
+race <- c("white", "black", "hispanic")
+
+## bad way
+race_num <- ifelse(race =="white", 1, 
+       ifelse(race == "black", 2, 3)) # expect 3 to be hispanics
+race_num
+```
+
+Works as expected, however if you accidentaly miss a condition or other conditions are present
+
+```{r}
+race <- c("white", "black", "hispanic", "asian", "alien")
+race_num <- ifelse(race =="white", 1, 
+       ifelse(race == "black", 2, 3)) 
+race_num 
+```
+
+You can silently get unexpected assigned values.
+
+One technique that can be used is to use the final condition as `-99` or some other
+very obvious flag to check that you captured all conditions
+
+```{r}
+race <- c("white", "black", "hispanic", "asian", "alien")
+race_num <- ifelse(race =="white", 1, 
+       ifelse(race == "black", 2, 
+              ifelse(race == "hispanic", 3, -99))) 
+race_num 
+
+if(any(race_num < 0)) {
+  print("missed a condition")
+}
+```
+
+And it even makes it easy to subset out the conditions missed
+
+```{r}
+race[race_num == -99]
+```
+
+## Loops
 
 * `for` looping structure
 
@@ -54,6 +140,82 @@ This is actually a "bad" habit that can run you into trouble with objects of len
 
 `seq_along` is a 'safer' option that has the exact same effect if you're starting from the first indice, with the added benefit of failing more gracefully.
 
+
+* `next` - skip iteration of loop
+
+`next` can be used to skip iterations in a loop, so as soon as a `next` is seen, the for
+loop moves to the next iteration and will ignore any code remaining from the existing iteration.
+
+This is useful if you are checking a condition at the beginning and if that condition is met
+go on so you don't run extra unnecessary code.
+
+
+## more For loop information
+
+Given a for loop where certain elements you do not want anything to happen,
+the `next` keyword allows one to immediately go back to the top of the loop and start
+with the next indice. 
+
+```{r }
+for(i in 1:10) {
+    if (i < 3) next
+    print(i)
+}
+```
+
+This is convenient if there is additional code below that you do not want R to run/evaluate
+given certain conditions are met, without having to resort to complex or nested `if` statments.
+
+`break` break the execution of a loop. Unlike next, this will actually halt the loop completely 
+and procede on to any later code after the loop.
+
+```{r}
+## some code
+
+for (i in 1:10) {
+  start <- i
+  print(paste0("before break, rep: " ,  i))
+  if (i == 5) {
+    break
+  }
+  print(paste0("after break, rep: " ,  i))
+  finished <- i
+}
+```
+
+In the above example, we see a conditional check where if `i == 5` break out of the loop.
+As the print statements show, only 4 values are printed for `after break`, as
+the last rep that executed code to the end of the loop was `4`, however you can see
+that the fifth replicate did start, and executed code up until the `break` statement.
+
+Finally, in the context of a function, a for loop (or any other code) can be prematurely
+completed by using a `return` statement.
+
+`return` - exit function
+
+```{r }
+number_is_present <- function(nums, test_number) {
+  for (i in seq_along(nums)) {
+    if(i == test_number) {
+      print("number found!")
+      return(TRUE) 
+    }
+  }
+  print("completed scanning, number not found!")
+  return(FALSE)
+}
+
+number_is_present(1:10, 5)
+
+number_is_present(1:10, 12)
+```
+
+In the example above, it makes sense to not continue scanning more numbers if we already know
+that the number is present, so by returning as soon as the number is detected, we prevent
+the need to continue running the function to completion. 
+
+## While loops
+
 * `while` - execute loop *while* tested condition is true. Often used if you need to evaluate until a certain condition is met. **danger**: can potentially result in infinite loops if not written properly or if the tested condition is never met.
 
 ```{r }
@@ -64,29 +226,9 @@ while(count < 10) {
 }
 ```
 
-While loops are frankly not used often for data analysis tasks. In almost all cases, a for-loop
-or the in-built apply functions will be preferable.
-
-* `next` - skip iteration of loop
-
-`next` can be used to skip iterations in a loop, so as soon as a `next` is seen, the for
-loop moves to the next iteration and will ignore any code remaining from the existing iteration.
-
-This is useful if you are checking a condition at the beginning and if that condition is met
-go on so you don't run extra unnecessary code.
-
-```{r }
-for(i in 1:10) {
-    if (i < 3) next
-    print(i)
-}
-```
-
-`break` break the execution of a loop. Unlike next, this will actually halt the loop completely 
-and procede on to any later code after the loop.
-
-`return` - exit function
-
+While loops are frankly not used often for data analysis tasks.
+In almost all cases, a for-loop, the in-built apply functions, or using vectorization 
+is be preferable.
 
 ## Assignments
 
