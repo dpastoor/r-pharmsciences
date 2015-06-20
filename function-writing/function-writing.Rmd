@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 ## Writing Functions 
 
 This section will be our bread and butter as functions provide the means for us to start to harness R's power to reduce duplication of code and increase our efficiency.
@@ -319,6 +322,7 @@ df_NOBQL <- lapply(df_list, BQL_NA)
 ```
 
 ### Assignment
+
 - extend BQL_NA to allow us to pass different character strings for what how the LLOQ was defined
 - BONUS: likewise, extend it to:   
     - handle any column 'conc' regardless of capitalization
