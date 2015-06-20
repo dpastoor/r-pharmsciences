@@ -1,0 +1,14 @@
+---
+title: "untidy_dataset_creation"
+author: "devin"
+date: "May 29, 2015"
+output: html_document
+---
+
+For REGEX activity 1:
+
+columns:
+
+1) SUBJID - siteid-sitenum-id
+2) metabolite (3 different)
+3) metabolite LLOQ ("LLOQ 0.100 ng/ml")

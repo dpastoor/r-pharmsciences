@@ -1,0 +1,30 @@
+---
+title: "stringr"
+author: "devin"
+date: "May 29, 2015"
+output: html_document
+---
+
+Base functions
+
+* grep
+* grepl
+
+primary stringr functions:
+* str_split
+* str_extract/str_extract_all
+* str_replace/str_replace_all
+* str_match/str_match_all (+ subset extraction)
+* str_detect
+* str_subset
+
+
+additional:
+
+* str_trim
+* str_c
+
+
+pattern (something) | (something else)
+
+escaping literals with \\
