@@ -1,7 +1,6 @@
 ---
 title: "Apply Functions"
 author: "Devin"
-date: "Wednesday, May 15, 2015"
 output: pdf_document
 ---
 
@@ -122,7 +121,7 @@ Used to apply functions to subsets of a vector. I will briefly give some detail,
 with(Theoph, tapply(conc, Wt, mean))
 ```
 
-Without using with:
+Without using `with`:
 
 ```{r }
 tapply(Theoph$conc, Theoph$Wt, mean)

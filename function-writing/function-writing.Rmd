@@ -1,4 +1,6 @@
 ---
+title: "Function Writing"
+author: "Devin Pastoor"
 output: pdf_document
 ---
 ## Writing Functions 
