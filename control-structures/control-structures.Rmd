@@ -1,10 +1,19 @@
 ---
+title: "Control Structures"
+author: "Devin Pastoor"
 output: pdf_document
 ---
-## Control Structors 
 
+# Control Structures 
 
-Have the structure and syntax
+Control structures offer the ability to control how your code executes and what
+is returned. R was designed to abstract away many of the basic use-cases so you 
+can get a long way without ever explicitly using some of these constructs, however, both the concepts and techniques are vital to appreciate as more complex
+problems arise.
+
+## IF statements
+
+`if` statements are the most basic control structure, and have the structure and syntax:
 
 ```
 if (<condition>) {
@@ -12,10 +21,91 @@ if (<condition>) {
 }
 ```
 
-If you would like the code to also do something if the condition is NOT met, then 
-you can use an else block
+One basic use case is when doing clinical trial simulations where many reps are
+run, it can be useful to only occasionally print status updates. In pseudocode
+the objective would be to have code that looked like
+
+```{r}
+for (rep in 1:50) {
+  #every 10 reps print a status update
+  if(rep %% 10 == 0) {
+    # %% is the modulus operator, a nice way to detect every 10th rep
+    print(paste("starting rep", rep))
+  }
+  # run some more code
+}
+```
+
+Another common pattern is to handle certain scenarios in a function, again using
+print (since it is easy to demonstrate) for whether a function prints
+
+```{r}
+chatty_sum <- function(a, b, verbose=FALSE) {
+  if(verbose) {
+    print(paste("calculating the sum of a:",a, "and b:", b))
+  }
+  return(a+b)
+}
+chatty_sum(1, 3)
+
+chatty_sum(2, 4, verbose=TRUE)
+```
+
+The `chatty_sum` function also illustrates another concept about `if` statements,
+**they are inherently truthy**, which means that if the condition you are evaluating naturally resolves to be `TRUE` or `FALSE`, you do not need to explicitly evaluate it. In this case, an example is worth a thousand words:
+
+*Correct way*
 
 ```
+condition <- TRUE
+
+if (condition) {
+
+}
+
+```
+
+*INCORRECT way*
+
+```
+condition <- TRUE
+
+if(condition ==TRUE) {
+# do stuff
+}
+```
+
+It is key to understand the inherent truthiness of **if** statements to further extend their usefulness. For example, if you need to execute the code inside the
+if statement when the tested condition is **FALSE** you can do-so using the `!` operator, which means *not*, so we are saying we want to run the code when it
+is **not FALSE**, which is equivalent to **TRUE**
+
+```{r}
+good_condition <- FALSE
+if(!good_condition) {
+  print("bad news!")
+}
+```
+
+## ELSE
+
+if statements are powerful to testing single conditions, however in may situations it is valuable to to also do something different if the condition is NOT met. 
+
+In **select** situations you may want to cover each of these scenarios via multiple if statements
+
+```
+if (<condition1>) ## do something
+if (<condition2>) ## do something
+if (<condition3>) ## do something
+```
+
+However this is generally frowned upon as it makes the code
+harder to make sense of, and easier to have unexpected conditions when a later condition is also TRUE, thereby overwriting a the results of a earlier TRUE condition.
+
+
+Instead, the `else` block offers a separate chunk of code which will only run
+if the if condition is FALSE.
+
+```r
 if (<condition>) {
 ## do something
 } else {
@@ -23,34 +113,29 @@ if (<condition>) {
 }
 ```
 
-You can also have multiple conditions to check for
+This can be further expanded to handle multiple conditions, however the value of
+this technique is only the code in the block with the *first* block that evaluates to TRUE will be run, and if no blocks are TRUE, then the code in the else block will run. 
 
-```
-if(condition) {
+```r
+if(<condition>) {
     ## do stuff
-} else if (conditition2) {
+} else if (<conditition2>) {
     ## do other stuff
     } else {
     ## do something for any other condition
 }
 ```
 
-Even with multiple tests, you don't have to use `else` statments
+## ifelse
 
-```
-if (condition1) ## do something
-if (condition2) ## do something
-if (condition3) ## do something
-```
+Full if/else blocks can be tedious to write out, and do not always play well with
+R's vectorization principles. Hence, a 'shortcut' block, `ifelse` is also available. 
+`ifelse` is most likely going to be your mostly frequently used control statement used during the data analysis process so make sure it is well understood!
 
-is perfectly valid.
-
-### ifelse
-
-
-`ifelse` - specialized test with the format `ifelse(<test condition>, <if yes>, <if no>)`
+`ifelse` blocks are designed with the format `ifelse(<test condition>, <if yes>, <if no>)`
 
 ```{r}
+
 gender <- c("Male", "Male", "Female")
 
 ismale <- ifelse(gender == "Male", 1, 0)
@@ -59,7 +144,10 @@ gender
 ismale
 ```
 
-You can even nest ifelse statements
+In the above block, the test is saying, go through the **gender** vector, and for each
+element, test if that value is equal to "Male", then return a value of 1, and if it is **anything other than Male**, return 0. Since this is performed for each element separately, it will return a vector the same length as the tested vector.
+
+You can even nest `ifelse` statements
 
 ```{r}
 race <- c("white", "black", "hispanic", "asian", "alien")
@@ -71,20 +159,22 @@ race
 race_num
 ```
 
-Notice that in this technique if none if the `TRUE` conditions are met, it will be assigned
-the value `4`. This is a good practice to make sure you catch all possible values. The last false value should always be used to handle 'all other conditions'. 
+Notice that in this technique if none if the `TRUE` conditions are met, it will be assigned the value `4`. This is a good practice to make sure you catch all possible values. 
+The last false value should always be used to handle 'all other conditions'. 
 
 For example
+
 ```{r}
 race <- c("white", "black", "hispanic")
 
 ## bad way
 race_num <- ifelse(race =="white", 1, 
-       ifelse(race == "black", 2, 3)) # expect 3 to be hispanics
+       ifelse(race == "black", 2, 
+              3)) # expect 3 to be hispanics
 race_num
 ```
 
-Works as expected, however if you accidentaly miss a condition or other conditions are present
+Works as expected, however if you accidentally miss a condition or other conditions are present
 
 ```{r}
 race <- c("white", "black", "hispanic", "asian", "alien")
