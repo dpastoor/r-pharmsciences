@@ -9,6 +9,7 @@ Table of Contents
     * [Introduction to Functions](function-writing/function-writing.md#writing-functions)
     * [Default Behaviors](function-writing/function-writing.md#default-behaviors)
     * [Argument Matching](function-writing/function-writing.md#argument-matching)
+* [Functional Programming](function-writing/functional-programming.md)
 * [Apply Functions](apply-functions/apply-functions.md)
 * [Reproducible Research](reproducible-research/reproducible-research.md)
 * [Rmarkdown](rmarkdown/rmarkdown.md)

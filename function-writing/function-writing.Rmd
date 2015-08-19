@@ -149,7 +149,7 @@ This can be helpful for legibility when dealing with more complex functions wher
 
 ```{r }
 num_sign <- function(x) {
-if (!is.numeric(x))return("NaN")
+if (!is.numeric(x)) return("NaN")
 if (x > 0) return("positive")
 if (x <0) return("negative")
 return("Don't know - is it zero?")
@@ -173,6 +173,9 @@ num_sign2("hello")
 num_sign2(0)
 ```
 
+One other nomenclature change to note in the above example, is if an `if` statement
+only contains a single statement on a single line, parentheses are not required. 
+
 **R can only return a single result from a function**
 
 To return multiple objects you can combine them into a list or other structure
@@ -194,18 +197,19 @@ PK_info2 <- function(){
     list("id" = id, "doses" = doses, "time" = time)
 }
 
-PK_info()
-PK_info2()
+PK_info() # only returns time
+PK_info2() # returns everything as a list
 ```
 
 
 
 ## Types of Functions
+
 3 specific types of functions that you may frequently run-into and/or utilize yourself are:
 
 * Anonymous functions - functions that don't have a name
 
-* Closures - functions written by other functions
+* Closures - functions written by other functions (will not discuss further)
 
 * Lists of Functions - storing multiple functions in a list
 
@@ -230,20 +234,6 @@ However, that is unnecessarily verbose for a one-time function, and can also int
 
 Just like other functions, anonymous function have **formals** (arguments), a **body** and are tied to a **parent environment**
 
-### Closures
-
-Closures were touched upon in the Environments and scoping sections.
-
-Closures are functions written within other functions, and therefore have access to the environment of the parent function (they *enclose* it).
-
-This is a powerful tool to creating **function factories**
-
-
-#### Assignment
-
-Create a function factory `dosing_time` that can create functions for various dosing schemes. Use it to create a QD, BID, and TID regimen out to 168 hours. 
-
-Hint: maybe something involving seq()
 
 ### Lists of Functions
 One way to store sets of functions is to put them in lists. Instead of a single function returning a list of results, you can actually store the functions themselves in a list for later re-use. 
@@ -263,71 +253,10 @@ To then call a function you can simply extract it from the list
 While it might seem awkward there are some situations where lists of functions provide convenience. It also offers a degree of modularity that reduces dependencies.
 
 #### Assignment
+
 - Using a dataset of your choosing write 2-3 functions to create exploratory plots 
 - Add those functions to an `exploratory_plots` list. 
 - Using `lapply` quickly call all the functions on:
     - the whole dataset
     - a subset
-
-
-## Functional Programming
-
-Functions provide a host of benefits to the user. The allow for efficient automation of repetitive tasks, bundling or common operations and a host of other possibilities.
-
-One additional, and equally important, opporunity they offer is to **reduce errors**.
-
-As touched upon in *Pragmatic Programming*, the **DRY** (DON'T REPEAT YOURSELF) is well suited to functions.
-
-A Motivating Example
-
-When dealing with a new dataset there are two frequent issues that arise with concentration data - BQL values, and how to handle them.
-
-Given the hypothetical situation where you are given 3 similarly-structured datasets how you could handle replacing the phrase `LLOQ < 10` simply with NA?
-
-The copy-paste process may be something along the lines of:
-
-```
-df1$conc[df1$CONC == 'LLOQ < 10'] <- NA
-df2$conc[df2$CONC == 'LLOQ < 10'] <- NA
-df3$conc[df3$CONC == 'LLOQ < 10'] <- NA
-df4$conc[df4$CONC == 'LLOQ < 10'] <- NA
-df5$conc[df4$CONC == 'LLOQ < 10'] <- NA
-```
-
-Quick - did anyone spot any issue with the code?
-
-Let's write a function to help automate this, as well as reduce potential for mistakes such as the above
-
-
-```{r eval = FALSE}
-BQL_NA <- function(x) {
-    x[x[["CONC"]] == 'LLOQ < 10'] <- NA
-    x
-}
-
-BQL_NA(df1)
-BQL_NA(df2)
-BQL_NA(df3)
-BQL_NA(df4)
-BQL_MA(df5)
-```
-
-Closer, but again, we're repeating ourselves.
-
-We touched on `lapply`, lets combine our dataframes into a list a 
-
-**SIDE TRICK** `df[] <- lapply(df, our_fun)` - using `df[]` will give us back a dataframe instead of a list from `df <- lapply(df, our_fun)`
-
-```{r, eval = FALSE }
-df_list <- list(df1, df2, df3, df4, df5)
-df_NOBQL <- lapply(df_list, BQL_NA)
-```
-
-### Assignment
-
-- extend BQL_NA to allow us to pass different character strings for what how the LLOQ was defined
-- BONUS: likewise, extend it to:   
-    - handle any column 'conc' regardless of capitalization
-    - handle any concentration column name (conc, concentration, DV, ...)
-
 
