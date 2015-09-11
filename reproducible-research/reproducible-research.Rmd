@@ -7,9 +7,7 @@ output: pdf_document
 
 This section covers the conceptual framework behind reproducible research.
 
-
 ## Importance of Reproducible Research
-
 
 ## "Best" Practices in Reproducible Research
 
@@ -31,7 +29,7 @@ One major goal of reproducible research is a final report should not include num
 
 For example, I would not write: In the Theophylline dataset there are 12 unique subjects. Instead, I can use in-line code evaluation to write:
 
-```{r, eval = FALSE}
+```
 There are `r length(unique(Theoph$Subject))` individuals in the dataset
 ```
 
