@@ -2,6 +2,7 @@
 Table of Contents
 * [Core R](core-r/core-r.md)
 * [Thinking in R](thinking-in-r/thinking-in-r.md)
+* [Control Structures](control-structures/control-structure.md)
 * [Data Input/Output](input-output/input-output.md)
 * [Custom Input](input-output/custom-io.md)
 * [Intro to Data Manipulation](intro-data-manipulation/intro-data-manipulation.md)

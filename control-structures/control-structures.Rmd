@@ -37,7 +37,8 @@ for (rep in 1:50) {
 ```
 
 Another common pattern is to handle certain scenarios in a function, again using
-print (since it is easy to demonstrate) for whether a function prints
+print (since it is easy to demonstrate) for whether a function prints out a message
+before returning the values.
 
 ```{r}
 chatty_sum <- function(a, b, verbose=FALSE) {
@@ -76,7 +77,7 @@ if(condition ==TRUE) {
 ```
 
 It is key to understand the inherent truthiness of **if** statements to further extend their usefulness. For example, if you need to execute the code inside the
-if statement when the tested condition is **FALSE** you can do-so using the `!` operator, which means *not*, so we are saying we want to run the code when it
+if statement when the tested condition is **FALSE** you can do-so using the `!` (often pronounced as 'bang') operator, which means *not*, so we are saying we want to run the code when it
 is **not FALSE**, which is equivalent to **TRUE**
 
 ```{r}
@@ -197,14 +198,39 @@ race_num
 
 if(any(race_num < 0)) {
   print("missed a condition")
+} else {
+  print("handled all")
 }
 ```
 
-And it even makes it easy to subset out the conditions missed
+And it even makes it easy to subset out the conditions missed to find and correct them
 
 ```{r}
 race[race_num == -99]
 ```
+
+see that missed alien and asian
+
+```{r}
+race <- c("white", "black", "hispanic", "asian", "alien")
+race_num <- ifelse(race =="white", 1, 
+       ifelse(race == "black", 2, 
+              ifelse(race == "hispanic", 3, 
+                     ifelse(race == "asian", 4, 
+                            ifelse(race == "alien", 5, -99)
+                            )
+                     )
+              )
+       )
+race_num 
+
+if(any(race_num < 0)) {
+  print("missed a condition")
+} else {
+  print("handled all")
+}
+```
+
 
 ## Loops
 
