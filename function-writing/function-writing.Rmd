@@ -3,6 +3,7 @@ title: "Function Writing"
 author: "Devin Pastoor"
 output: pdf_document
 ---
+
 ## Writing Functions 
 
 This section will be our bread and butter as functions provide the means for us to start to harness R's power to reduce duplication of code and increase our efficiency.
@@ -24,6 +25,7 @@ In R, a function is defined with the following syntax:
 ```
 function(parameters) {body}
 ```
+
 * `function` is a reserved word to initialize creation.
 * **parameters** are sets of formal parameter names that will be defined in the function body.
 * **Formal parameters** are parameters included in the function definition
@@ -132,6 +134,7 @@ As you can see, all parameters after the first - which was given to `x` - where 
 
 
 ### Return Values
+
 In R after a function completes its code it will return a resulting value. 
 
 ```{r }
@@ -238,6 +241,7 @@ Just like other functions, anonymous function have **formals** (parameters), a *
 
 
 ### Lists of Functions
+
 One way to store sets of functions is to put them in lists. Instead of a single function returning a list of results, you can actually store the functions themselves in a list for later re-use. 
 
 ```{r, eval = FALSE }
