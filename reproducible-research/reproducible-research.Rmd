@@ -1,19 +1,13 @@
-Reproducible Research
-=============================
+---
+title: "Reproducible Research"
+author: "Devin"
+date: "Wednesday, May 15, 2015"
+output: pdf_document
+---
 
 This section covers the conceptual framework behind reproducible research.
 
-For software-specific implementations, tips, and tricks, please refer to the 
-following sections:
-
-* RMD_Lab_Notebook
-* LYX Reports
-* Slidify Presentations
-
-TODO: add components for: Rmarkdown, knitr, git/github/bitbucket
-
 ## Importance of Reproducible Research
-
 
 ## "Best" Practices in Reproducible Research
 
@@ -30,14 +24,12 @@ Minimal set of guidelines that should be followed to reduce the likelihood of ot
 
 ## Reproducible Research Tools
 
-
-
 ## In-line code
 One major goal of reproducible research is a final report should not include numbers derived from the data. Instead, numbers should be printed as part of the code evaluation.
 
 For example, I would not write: In the Theophylline dataset there are 12 unique subjects. Instead, I can use in-line code evaluation to write:
 
-```{r, eval = FALSE}
+```
 There are `r length(unique(Theoph$Subject))` individuals in the dataset
 ```
 
@@ -49,6 +41,5 @@ There are `r length(unique(Theoph$Subject))` individuals in the dataset
 
 This can be extended to handle output from models, summary statistics, etc.
 
-TODO: add model fit example
 
 Karl Broman also provides a nice [knitr in a nutshell tutorial](http://kbroman.github.io/knitr_knutshell/)

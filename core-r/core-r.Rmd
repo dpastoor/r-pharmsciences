@@ -4,6 +4,7 @@ author: "Devin"
 date: "Wednesday, April 15, 2015"
 output: pdf_document
 ---
+
 ```{r include=F, message=F, warning=F}
 library(PKPDmisc)
 ```
@@ -73,10 +74,12 @@ attributes(numeric_vector)
 ```
 
 
-There are two useful functions for handling vectors: `is.*` and `as.*`
+There are two useful functions for handling data structures: `is.*` and `as.*`
 
 * `is.*` is a testing function that returns TRUE or FALSE
 * `as.*` is a coercion function - it attempts to convert the input to the requested data structure
+
+As an example with vectors:
 
 ```{r }
 numeric_vector <- c(1,2,3)
@@ -104,6 +107,27 @@ Note: If a logical vector is coerced into a numeric TRUE becomes 1 and FALSE bec
 
 * vectors can be indexed by position: v[1] refers to the first element of the vector
 * vectors can be indexed by multiple positions using c() - v[c(1,2)] will return a sub-vector the first and second element of 'v'
+
+### Coercion chain
+
+To help defensively prepare yourself for handling coersion, it is helpful to understand
+the heirarchy of coersion:
+
+```{r}
+fac_test <- factor(c("test1", "test2"))
+fac_test
+str(c(fac_test, 1, TRUE, "1" ))
+str(c(as.factor("test"), 1, TRUE  ))
+str(c(as.factor("test"), TRUE  )) ## numerical representation of factor
+
+```
+
+Whichever is HIGHEST, all others will be converted to match:
+
+character <- numeric <- factor <- boolean
+
+Notice, one other perculiarity of R, in that the factor test1/test2 are converted to 
+values 1 and 2. This behavior will be discussed in more detail later.
 
 ## Attributes
 Attributes are additional metadata about an object. The most common 3 attributes are:
@@ -148,7 +172,7 @@ a[1,]
 a[,1]
 ```
 
-Beyond the 3 common attributes, additional attributes can be assigned; however it is important to note that when a vector is modified most attributes beyond the 3 listed above are lost
+Beyond the 3 common attributes, additional attributes can be assigned; however it is important to note that when a vector is modified most attributes beyond the 3 listed above are lost. This rears its head frequently with custom types - for example the `haven` package, which reads in sas files and will add attributes such as `label` that are present in SAS, can be lost during convertions due to how R removes attributes.
 
 ```{r attribute_ex}
 conc <- c(9.62, 3.1, 2, 0.3)
@@ -160,8 +184,8 @@ conc
 attributes(conc)
 ```
 
-Also of note, is for the package `dplyr`, which will become a key part of one's analysis toolkit,
-columns or vectors with additional attributes actually cause errors as dplyr is conservative, and rather than accidentally stripping key attributes before calculations, just errors out, so you must manually remove the additional attributes.
+In a similar vein, for the package `dplyr`, which will become a key part of one's analysis toolkit,
+columns or vectors with additional attributes actually cause errors as dplyr is conservative, and rather than accidentally stripping key attributes before calculations, dplyr just errors out, so you must manually remove the additional attributes.
 
 Attributes can be removed by setting them to `NULL`, so for the above example,
 we can strip the `units` attribute by setting it to NULL
@@ -188,9 +212,11 @@ str(c(list(1:3), list("hello", "there"), TRUE, 1:3))
 Note: As shown in the examples, the structure of an object can be shown with `str`
 
 ## Data Frames
+
 The most commonly used method for storing data is the data frame. At its core, a data frame is a list of equal-length vectors. You can think of it as having the same properties as both a matrix and a list. (This means you can use the properties of both for things like indexing and subsetting)
 
 A couple useful commands for dataframe attributes:
+
 - `names()`
 - `colnames()`
 - `rownames()`
@@ -223,12 +249,14 @@ You can create new data structure with `datastructure()` - ie `data.frame()`
 As mentioned previously, you can coerce an object to a different data structure with `as.*` - ie: `as.data.frame()`
 
 An additional note when coercing to data frames:
+
 * a vector will yield a one-column data frame
 * a list will yield one column for each element; it's an error if they're not all the same length
 * a matrix will yield a data frame with the same number of columns
 
 
 ## Combining Data Structures/Objects
+
 There are a number of ways to combine multiple objects. The simplest are `c()`, `cbind()`, and `rbind()`
 
 
@@ -246,7 +274,10 @@ While `cbind()` may seem like an easy option to quickly create df's be careful o
 class(cbind(time, conc))
 ```
 
-This is very important when dealing with coercion
+```{r}
+class(data.frame(time, conc))
+```
+
 
 ```{r }
 time <- 1:6
@@ -258,11 +289,13 @@ That seems easy to catch, but what about something like this:
 ```{r }
 as.data.frame(cbind(time, conc))
 ```
+
 It prints out to the console looking like numbers but...
 
 ```{r }
 str(as.data.frame(cbind(time, conc)))
 ```
+
 They are actually coerced to a matrix of character factors
 
 This is because cbind will create a matrix unless one of the objects is already a data frame.
@@ -277,7 +310,7 @@ str(as.data.frame(cbind(time, conc)))
 # instead create new data frame
 str(data.frame(time, conc))
 ```
-Likewise, the safest way to use cbind() is to ensure all objects are of the same type.
+Likewise, the safest way to use cbind() is to ensure all objects are of the same type or already a higher level data structure such as a dataframe.
 
 ## One last combining catch
 
@@ -362,6 +395,4 @@ print(levels(x))  ## Now "Levels: d e a b c"
 #### Your task
 
 * Using Theoph dataset, relevel the `Subject` column so the factor levels correspond to the labels
-
-* I've also introduced 2 new concepts in the Theoph example, `with` and `within`, using both with and within, scale Theoph's Wt to lbs from kg. Start with the r-examples `?with`. 
 

@@ -1,16 +1,14 @@
-## Apply Functions
-
-TODO: flesh out and add more concrete PMTRX examples
+---
+title: "Apply Functions"
+author: "Devin"
+output: pdf_document
+---
 
 There are a number of `apply` commands in the R family. Each has different way of handling data
 
 Additional information can be found in threads on [stackoverflow](http://stackoverflow.com/questions/3505701/r-grouping-functions-sapply-vs-lapply-vs-apply-vs-tapply-vs-by-vs-aggrega)
 
 Note - the apply-style commands are *not* particularly faster than a *well-written* loop. The benefit is their one-line nature. [Read some more here](http://stackoverflow.com/questions/2275896/is-rs-apply-family-more-than-syntactic-sugar?rq=1)
-
-Here is a brief overview:
-
-TODO: test tag here
 
 ## apply
 
@@ -74,6 +72,37 @@ Generally, the "rules" for `sapply` can be thought-of as:
 ## vapply
 
  preferred over sapply due to minor speed improvement and better consistency with return types. Can read more about it on [stack overflow here](http://stackoverflow.com/questions/12339650/why-is-vapply-safer-than-sapply)
+ 
+ The way `vapply` works is you also specific implicitly the type of value you expect it to return.
+ 
+`vapply(<values>, <function>, <returntype>)`
+
+```{r}
+sapply(Theoph[c("Wt", "conc")], summary)
+
+vapply(Theoph[c("Wt", "conc")], summary, c(Min. = 0, "1st Qu." = 0, Median = 0, mean = 0,  "3rd Qu." = 0, Max. = 0))
+```
+
+But unlike sapply, which will give back whatever, vapply will only work if explicity get back
+what you ask for.
+```{r, eval = F}
+sapply(Theoph, summary)
+vapply(Theoph, summary, c(Min. = 0, "1st Qu." = 0, Median = 0, mean = 0,  "3rd Qu." = 0, Max. = 0))
+```
+
+A common pattern if you just expect a character value, or logical value etc. is to use `character(1)`
+
+```{r}
+sapply(Theoph[, c("Wt", "conc", "Time")], class)
+vapply(Theoph[, c("Wt", "conc", "Time")], class, character(1))
+```
+
+Again, vapply will catch so wouldn't run into unexpected output. This can be key when you are testing conditions (eg if class == "<certain_class>") where the test conditions are very specific, so things like passing a 2 element vector for the class would cause the whole function to error. It is better to catch it early than for things to blow up unexpectedly.
+
+```{r, eval=F}
+sapply(Theoph, class)
+vapply(Theoph, class, character(1))
+```
 
 ## tapply
 
@@ -92,7 +121,7 @@ Used to apply functions to subsets of a vector. I will briefly give some detail,
 with(Theoph, tapply(conc, Wt, mean))
 ```
 
-Without using with:
+Without using `with`:
 
 ```{r }
 tapply(Theoph$conc, Theoph$Wt, mean)

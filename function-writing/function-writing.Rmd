@@ -1,3 +1,9 @@
+---
+title: "Function Writing"
+author: "Devin Pastoor"
+output: pdf_document
+---
+
 ## Writing Functions 
 
 This section will be our bread and butter as functions provide the means for us to start to harness R's power to reduce duplication of code and increase our efficiency.
@@ -10,17 +16,19 @@ Functions in R are known as "first class objects" - that is, they can be treated
 * assigned to variables
 * stored in lists
 * returned from functions
-* passed as arguments to other functions
+* passed as parameters to other functions
 
 Essentially, you can do anything with a function that you can with a vector.
 
 In R, a function is defined with the following syntax:
 
-`function(arguments) body`
+```
+function(parameters) {body}
+```
 
 * `function` is a reserved word to initialize creation.
-* **Arguments** are sets of formal argument names that will be defined in the function body.
-* **Formal arguments** are arguments included in the function definition
+* **parameters** are sets of formal parameter names that will be defined in the function body.
+* **Formal parameters** are parameters included in the function definition
 * The **body** is simply the code that the function will execute
 
 A function can be written in one line as shown above, however, to encapsulate multiple lines brackets `{}` must be used.
@@ -28,14 +36,14 @@ A function can be written in one line as shown above, however, to encapsulate mu
 A multi-line function could look as such:
 
 ```
-function(arguments) {
+function(parameters) {
     some code
     some more code
     even more code
 }
 ```
 
-We can a simple addition function to examine some features
+To create a function for future use we must assign it to an object (a variable). For example, we can a simple addition function to examine some features
 
 ```{r }
 add_fun <- function(x, y) {
@@ -43,7 +51,7 @@ add_fun <- function(x, y) {
 }
 ```
 
-This is a function function declaration. We have created a function and given it a name. We can use it by calling it by name and passing some arguments that it requires.
+This is a function declaration. We have created a function and given it a name. We can use it by calling it by name and passing some parameters that it requires.
 
 ```{r }
 add_fun(1, 5)
@@ -52,9 +60,10 @@ add_fun(1, 5)
 There are numer of important behaviors going on 'behind-the-scenes' in even this simple function call.
 
 ### Default Behaviors
-**Formal arguments** can be soley user defined, they can also have a default value/behavior.
 
-Defaults can be assigned to an argument with `=` 
+**Formal parameters** can be soley user defined, they can also have a default value/behavior.
+
+Defaults can be assigned to a parameter with `=` 
 
 Let's update our function to default to `y = 5`
 
@@ -62,7 +71,7 @@ Let's update our function to default to `y = 5`
 add_fun2 <- function(x, y = 5) x + y
 ```
 
-When a default behavior defined, if no object or value is passed to that argument, the default value is used.
+When a default behavior defined, if no object or value is passed to that parameter, the default value is used.
 
 ```{r }
 add_fun2(6)
@@ -74,42 +83,42 @@ But you can override the default behavior by simply passing in some value
 add_fun2(6, 3)
 ```
 
-If no default is defined, the function will halt and give you an error requesting what to do with the missing argument value
+If no default is defined, the function will halt and give you an error requesting what to do with the missing parameter value
 
 ```{r, error = TRUE }
 add_fun2(y = 3)
 ```
 
-When you have multiple arguments - how does a function know which one to use for the various arguments?
+When you have multiple parameters - how does a function know which one to use for the various parameters?
 
-### Argument Matching
+### Parameter Matching
 
-Like all things programming - R has specific rules for how it handles argument matching for functions.
+Like all things programming - R has specific rules for how it handles parameter matching for functions.
 
 Here is a basic overview:
 
-* arguments can be matched positionally or by name
+* parameters can be matched positionally or by name
 * you can mix positional and named matching
-    * when an argument is matched by name it is "removed" from the argument list - the remaining arguments are matched by order
-* arguments can be partially matched
+    * when an parameter is matched by name it is "removed" from the parameter list - the remaining parameters are matched by order
+* parameters can be partially matched
 
-The overall order of operations for argument matching:
+The overall order of operations for parameter matching:
 
-1) Check exact match for named argument
-2) Check for partial match for named argument
+1) Check exact match for named parameter
+2) Check for partial match for named parameter
 3) Check for positional match
-4) Any remaining unmatched formal arguments are "taken up" by `...`
+4) Any remaining unmatched formal parameters are "taken up" by `...`
 
 **Caveat(s)** 
 
-* Any arguments *after* `...` are only matched exactly
-* Tags partially matching multiple arguments will result in an error
+* Any parameters *after* `...` are only matched exactly
+* Tags partially matching multiple parameters will result in an error
 
-### Passing on Arguments
+### Passing on parameters
 
-`...` argument indicates that arguments may be passed on to other (internally called) functions
+`...` parameter indicates that parameters may be passed on to other (internally called) functions
 
-`...` can be used when extending another function where you don't want to copy all the arguments from the original function. 
+`...` can be used when extending another function where you don't want to copy all the parameters from the original function. 
 
 
 ```{r }
@@ -121,10 +130,11 @@ f <- function(x,...) {
 f("It worked! The summary is:", runif(1000, 0, 100), digits=2)
 ```
 
-As you can see, all arguments after the first - which was given to `x` - where passed to `summary`.
+As you can see, all parameters after the first - which was given to `x` - where passed to `summary`.
 
 
 ### Return Values
+
 In R after a function completes its code it will return a resulting value. 
 
 ```{r }
@@ -144,7 +154,7 @@ This can be helpful for legibility when dealing with more complex functions wher
 
 ```{r }
 num_sign <- function(x) {
-if (!is.numeric(x))return("NaN")
+if (!is.numeric(x)) return("NaN")
 if (x > 0) return("positive")
 if (x <0) return("negative")
 return("Don't know - is it zero?")
@@ -168,6 +178,9 @@ num_sign2("hello")
 num_sign2(0)
 ```
 
+One other nomenclature change to note in the above example, is if an `if` statement
+only contains a single statement on a single line, parentheses are not required. 
+
 **R can only return a single result from a function**
 
 To return multiple objects you can combine them into a list or other structure
@@ -189,18 +202,19 @@ PK_info2 <- function(){
     list("id" = id, "doses" = doses, "time" = time)
 }
 
-PK_info()
-PK_info2()
+PK_info() # only returns time
+PK_info2() # returns everything as a list
 ```
 
 
 
 ## Types of Functions
+
 3 specific types of functions that you may frequently run-into and/or utilize yourself are:
 
 * Anonymous functions - functions that don't have a name
 
-* Closures - functions written by other functions
+* Closures - functions written by other functions (will not discuss further)
 
 * Lists of Functions - storing multiple functions in a list
 
@@ -223,24 +237,11 @@ lapply(df, len_unique)
 
 However, that is unnecessarily verbose for a one-time function, and can also introduce unnecessary clutter into your environment(s)
 
-Just like other functions, anonymous function have **formals** (arguments), a **body** and are tied to a **parent environment**
+Just like other functions, anonymous function have **formals** (parameters), a **body** and are tied to a **parent environment**
 
-### Closures
-
-Closures were touched upon in the Environments and scoping sections.
-
-Closures are functions written within other functions, and therefore have access to the environment of the parent function (they *enclose* it).
-
-This is a powerful tool to creating **function factories**
-
-
-#### Assignment
-
-Create a function factory `dosing_time` that can create functions for various dosing schemes. Use it to create a QD, BID, and TID regimen out to 168 hours. 
-
-Hint: maybe something involving seq()
 
 ### Lists of Functions
+
 One way to store sets of functions is to put them in lists. Instead of a single function returning a list of results, you can actually store the functions themselves in a list for later re-use. 
 
 ```{r, eval = FALSE }
@@ -258,70 +259,10 @@ To then call a function you can simply extract it from the list
 While it might seem awkward there are some situations where lists of functions provide convenience. It also offers a degree of modularity that reduces dependencies.
 
 #### Assignment
+
 - Using a dataset of your choosing write 2-3 functions to create exploratory plots 
 - Add those functions to an `exploratory_plots` list. 
 - Using `lapply` quickly call all the functions on:
     - the whole dataset
     - a subset
-
-
-## Functional Programming
-
-Functions provide a host of benefits to the user. The allow for efficient automation of repetitive tasks, bundling or common operations and a host of other possibilities.
-
-One additional, and equally important, opporunity they offer is to **reduce errors**.
-
-As touched upon in *Pragmatic Programming*, the **DRY** (DON'T REPEAT YOURSELF) is well suited to functions.
-
-A Motivating Example
-
-When dealing with a new dataset there are two frequent issues that arise with concentration data - BQL values, and how to handle them.
-
-Given the hypothetical situation where you are given 3 similarly-structured datasets how you could handle replacing the phrase `LLOQ < 10` simply with NA?
-
-The copy-paste process may be something along the lines of:
-
-```
-df1$conc[df1$CONC == 'LLOQ < 10'] <- NA
-df2$conc[df2$CONC == 'LLOQ < 10'] <- NA
-df3$conc[df3$CONC == 'LLOQ < 10'] <- NA
-df4$conc[df4$CONC == 'LLOQ < 10'] <- NA
-df5$conc[df4$CONC == 'LLOQ < 10'] <- NA
-```
-
-Quick - did anyone spot any issue with the code?
-
-Let's write a function to help automate this, as well as reduce potential for mistakes such as the above
-
-
-```{r eval = FALSE}
-BQL_NA <- function(x) {
-    x[x[["CONC"]] == 'LLOQ < 10'] <- NA
-    x
-}
-
-BQL_NA(df1)
-BQL_NA(df2)
-BQL_NA(df3)
-BQL_NA(df4)
-BQL_MA(df5)
-```
-
-Closer, but again, we're repeating ourselves.
-
-We touched on `lapply`, lets combine our dataframes into a list a 
-
-**SIDE TRICK** `df[] <- lapply(df, our_fun)` - using `df[]` will give us back a dataframe instead of a list from `df <- lapply(df, our_fun)`
-
-```{r, eval = FALSE }
-df_list <- list(df1, df2, df3, df4, df5)
-df_NOBQL <- lapply(df_list, BQL_NA)
-```
-
-### Assignment
-- extend BQL_NA to allow us to pass different character strings for what how the LLOQ was defined
-- BONUS: likewise, extend it to:   
-    - handle any column 'conc' regardless of capitalization
-    - handle any concentration column name (conc, concentration, DV, ...)
-
 
