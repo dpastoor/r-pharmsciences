@@ -5,7 +5,7 @@ date: "May 16, 2015"
 output: pdf_document
 ---
 
-You've made it through the theoretical aspects and you're close to being ready to start getting your hands dirty. All of you have most likely used every single element of this module, but now we will reassess these operators and behaviors to get a deeper understanding - thus allowing us to wield them more effectively.
+All of you have most likely used every single element of this module, but now we will reassess these operators and behaviors to get a deeper understanding - thus allowing us to wield them more effectively.
 
 ## Subsetting
 
