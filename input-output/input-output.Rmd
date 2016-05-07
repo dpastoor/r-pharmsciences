@@ -9,7 +9,16 @@ output: pdf_document
 To preface this initial section, if you are working in a locked version of R, 
 due to company policy, you may skip to the built-in section below.
 
+Two packages provide much of the general I/O funtionality necessary:
 
+1) `readr`
+2) `data.table`
+
+In addition, `PKPDmisc` offers wrappers that provide tailored input/output:
+
+1) read_nonmem()
+2) write_nonmem()
+3) read_phx()   # for phx nlme datasets with a units column
 
 
 ## Built-in I/O
