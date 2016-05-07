@@ -4,10 +4,10 @@ author: "Devin Pastoor"
 output: html_document
 ---
 
-
 This documentation will eventually grow to a more complete resource of some "better" practices and examples for how to design and maintain an Rmd lab notebook.
 
 ##Good Practices
+
 * When working 'live' on chunks, use a clean R session `rm(list = ls())` so you won't get anything different when you knit (eg. make sure no external code was run that wouldn't run when you knit)
 * attach `sessionInfo()` at the bottom of every document!
   * better yet `devtools::session_info()` is a new(ish) function that gives more relevant information.
@@ -21,6 +21,7 @@ This documentation will eventually grow to a more complete resource of some "bet
         * This directory is reset after each chunk! So no setting in a higher level chunk and forgetting
 
 ## Extracting R Code
+
 To *tangle* (extract program code), the function `purl()` will compile all R-code to a single .R file.
 
 ```
@@ -30,6 +31,7 @@ purl("your-file.Rmd")
 ```
 
 ## Chunk Labels
+
 Think of chunk labels as unique id's in a document. While they are used mainly for geration of external files, naming allows you to reference them elsewhere in your document. Automatically generated figures are also based on chunk-label names.
 
 ```
@@ -48,6 +50,7 @@ The syntax is `opts_chunk$set(<options-you-want,...>)`
         * digits = # digits to report
 
 ## Showing/Hiding Output Options
+
 * `echo` - can take a TRUE/FALSE argument for whether to display the code as well as the output (default, TRUE) or just the output (FALSE) **or** can specify certain lines you would like to display
     - `echo=1:2` would display lines 1 and 2 only
     - note: line numbers are based on *expressions* rather than completed lines
@@ -60,6 +63,7 @@ The syntax is `opts_chunk$set(<options-you-want,...>)`
 * `include` - whether to include the code chunk in your final document
 
 ## Figures
+
 * Alignment - `fig.align = default=center/left/right`
 * Path - `fig.path`
 * height/width
@@ -71,6 +75,7 @@ The syntax is `opts_chunk$set(<options-you-want,...>)`
 * `cache = TRUE`
 
 Do have some nice granular control options however
+
 * update if version changes `version = R.version.string` 
 * check to see if input file changes `<file>_name=file.info('<file>.csv')$mtime` and re-read data if newer
 * check if other chunk updates `dependson='<chunk-name>'`
@@ -115,14 +120,11 @@ kable(AUC_df, digits = 2)
 QUESTION: can digits be specified for certain columns only?
 
 ## Adding Table of Contents
+
 A basic table of contents can be easily added through the options argument with knit2html
 
 Calling knit2html is equivalent to clicking on the `Knit HTML` button in Rstudio
+
 ```
 knit2html("foo.Rmd", options = c("toc", markdown::markdownHTMLOptions(TRUE)))
 ```
-
-
-TODO: controlling table style via css
-
-TODO: add xtable/pander options
