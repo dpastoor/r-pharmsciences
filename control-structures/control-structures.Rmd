@@ -343,8 +343,96 @@ while(count < 10) {
 ```
 
 While loops are frankly not used often for data analysis tasks.
-In almost all cases, a for-loop, the in-built apply functions, or using vectorization 
-is be preferable.
+In most cases, a for-loop, the in-built apply functions, or using vectorization 
+is be preferable. While loops can be valuable for instances when you are unsure about 
+when the final criteria required will be satisfied. For example, given a resampling function
+that you must resample from a mathematical distribution, however want to apply some other physiological constraints such that some samples might need to be resampled again before being stored.
+
+A simple example of this is, given simulations from a truncated normal distribution, where only values greater than 0.1 should be kept.
+
+A couple different ways this could be mentally managed
+
+```{r}
+# while loop inside a for loop
+result <- c()
+for (i in 1:10) {
+  sample <- 0
+  while (sample < 0.1) {
+    ## will always fire the first time per rep since at first sample will be 0
+    print(paste0("sample less than 0.1, resampling on rep", i))
+    sample <- rnorm(1, mean = 0.5, sd = 2)
+  }
+  result <- c(result, sample)
+}
+
+# in the end get our nice set of 10 results
+result
+```
+
+The problem with this result is it reallocates a new vector each time a new sample is concatenated,
+so for large numbers of samples will be quite slow. Instead, we can also manage via vectorization. Since we are going to do all the calculations at once, we need to change our logic in how we are resampling.
+
+```{r}
+result <- rnorm(10, 0.5, 2)
+while(any(result < 0.1)) {
+  print("at least 1 result still below 0.1, resampling those values") 
+  # find which indices correspond to values less than 0.1
+  to_low <- which(result < 0.1)  
+  # replace them with resampled values
+  result[to_low] <- rnorm(length(to_low), 0.5, 2)
+}
+
+result
+```
+
+
+```{r}
+looped_resampling <- function(total_num = 100) {
+  result <- c()
+  for (i in 1:total_num) {
+    sample <- 0
+    while (sample < 0.1) {
+      ## will always fire the first time per rep since at first sample will be 0
+      message(paste0("sample less than 0.1, resampling on rep", i))
+      sample <- rnorm(1, mean = 0.5, sd = 2)
+    }
+    result <- c(result, sample)
+  }
+  result
+}
+
+vectorized_resampling <- function(total_num = 100) {
+  result <- rnorm(10, 0.5, 2)
+  while(any(result < 0.1)) {
+    message("at least 1 result still below 0.1, resampling those values") 
+    # find which indices correspond to values less than 0.1
+    to_low <- which(result < 0.1)  
+    # replace them with resampled values
+    result[to_low] <- rnorm(length(to_low), 0.5, 2)
+  }
+  result
+}
+
+```
+
+
+```{r}
+library(dplyr)
+library(tibble)
+res <- suppressMessages(microbenchmark::microbenchmark(
+  looped_resampling(),
+  vectorized_resampling(),
+  times = 20L
+))
+res_df <- data_frame(expr = res$expr, timing = res$time)
+
+res_df %>% group_by(expr) %>% 
+  summarize(min = min(timing), 
+            mean = mean(timing),
+            max = max(timing))
+ggplot2::autoplot(res)
+```
+
 
 ## Assignments
 
