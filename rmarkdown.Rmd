@@ -4,17 +4,17 @@ This documentation will eventually grow to a more complete resource of some "bet
 
 ##Good Practices
 
-* When working 'live' on chunks, use a clean R session `rm(list = ls())` so you won't get anything different when you knit (eg. make sure no external code was run that wouldn't run when you knit)
-* attach `sessionInfo()` at the bottom of every document!
-  * better yet `devtools::session_info()` is a new(ish) function that gives more relevant information.
-* If you have multiple files or additional complexities using a Makefile may be easier long term. In simple terms, a makefile is a script that re-builds your project so you can just source that script rather than manually clicking knit, etc.
+* When working 'live' on chunks, use a clean R session by running `rm(list = ls())` in your console so you won't get anything different when you knit (eg. make sure no external code was run that wouldn't run when you knit)
+* attach a `devtools::session_info()` chunk at the bottom of each rmd file
+* If you have multiple files or additional complexities using a Makefile may be easier long term. In simple terms, a makefile is a script that re-builds your project so you can just source that script rather than manually clicking knit, etc. In simplest terms, a make file can describe the steps to re-create your project programmatically (eg if you need to run multiple Rmd's consecutively, etc)
 * use chunk labels if possible
+* split your file into multiple small chunks that are responsible for one portion of code, this will make it easier to debug if not knitting properly.
 
 
 ## Some 'gotchas' for knitting
 
 * when knitted, each chunk is evaluated based on a working directory of the current file location of the Rmd document. 
-        * This directory is reset after each chunk! So no setting in a higher level chunk and forgetting
+  * This directory is reset after each chunk! So no setting in a higher level chunk and forgetting
 
 ## Extracting R Code
 
@@ -26,15 +26,18 @@ purl("your-file.Rmd")
 # results in your-file.R in the same directory
 ```
 
+the `purl` function can be very handy when you want to run all the code in an rmarkdown cluster as a stand-alone script on a cluster. For example, I will create a more heavily documented Rmd file for each step of the simulation, that I can knit easily while working dynamically, then when ready to run in larger batch of scenarios on a cluster, it can be run through purl to create an Rscript to be run.
+
 ## Chunk Labels
 
 Think of chunk labels as unique id's in a document. While they are used mainly for geration of external files, naming allows you to reference them elsewhere in your document. Automatically generated figures are also based on chunk-label names.
 
 ```
-{r chunk_name, <additional options>}
+{r <chunk_name>, <additional options>}
 ```
 
 ## Global Options
+
 global options can be modified at any point in your document and will affect all chunks below.
 
 The syntax is `opts_chunk$set(<options-you-want,...>)`
@@ -42,8 +45,8 @@ The syntax is `opts_chunk$set(<options-you-want,...>)`
 ## Digits of Output
 
 * Control with `options(scipen = <#>, digits = <#>)`
-        * `scipen` - controls when reported as scientific notation
-        * digits = # digits to report
+  * `scipen` - controls when reported as scientific notation
+  * digits = # digits to report
 
 ## Showing/Hiding Output Options
 
@@ -77,21 +80,6 @@ Do have some nice granular control options however
 * check if other chunk updates `dependson='<chunk-name>'`
         * can also take integer chunk names `dependson = -1` would set dependency for chunk above
 
-## Cross-Referencing
-
-```
-{r my-theme}
-theme(axis.text.x = element_text(size = 18),
-)
-```
-
-Then in later chunk
-```
-qplot(conc, Time, data = Theoph, color = Subject) + <<my-theme>>
-```
-
-TODO: flesh out and add additional material from knitr book
-
 ## Adding Tables
 
 Knitr has a built in function `kable` that allows for easy creation of tables. 
@@ -110,7 +98,7 @@ One other highly useful argument is `digits`, which passes all values in numeric
 ```{r}
 AUC_df <- data.frame(ID = 1:5, AUC = runif(5, 10, 100))
 kable(AUC_df)
-kable(AUC_df, digits = 2)
+kable(AUC_df, digits = 3)
 ```
 
-QUESTION: can digits be specified for certain columns only?
+The rstudio team has put out a great [cheatsheat](https://www.rstudio.org/links/r_markdown_cheat_sheet) as well as a [reference guide](https://www.rstudio.org/links/r_markdown_reference_guide)
