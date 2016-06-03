@@ -23,6 +23,6 @@ topics in a pragmatic way to keep those new to programming engaged. In essence, 
 
 That said, for more experienced programmers, coming from other languages such as python, javascript, c/c++, java, etc, there may be appreciation in getting up to speed to connect concepts they already know how to perform in one language to how R behaves. If you fall into that category, I would suggest perusing through 'Core R' and 'Thinking in R' either before or in line with the rest of the book as it will help provide a deeper connection to the data structures and functionality available in R to your prior experience(s).
 
-Even more importantly, it does not make sense for me to re-explain the wheel when Hadley has done such a fantastic job, so I defer to explanations of the finer details of how R works, especially 'under the hood', in his book [advanced R](http://adv-r.had.co.nz/)
+Even more importantly, it does not make sense for me to re-explain the wheel when Hadley has done such a fantastic job, so I defer to explanations of the finer details of how R works, especially 'under the hood', to his book [advanced R](http://adv-r.had.co.nz/). This book should be 'required' reading to better appreciate how to master R.
 
 This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/us/) United States License. 

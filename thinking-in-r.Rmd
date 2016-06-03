@@ -1,14 +1,9 @@
----
-title: "Thinking in R"
-author: "Devin"
-date: "April 16, 2015"
-output: pdf_document
----
+# Thinking in R
 
 Thinking in R is very important as your R-tasks increase in complexity or magnitude.  Keep in mind that the rest of the workshop will build and call on these concepts heavily. This will also be your first foray into examining your approach to a problem and 'best practices', as there will almost always be a number of ways of getting to the result you want. The goal is to keep you in the 'better' to 'best' range as often as possible. 
 
 
-### Memory Allocation
+## Memory Allocation
 
 Before we jump into subsetting, we need to briefly touch upon how R treats data, and more importantly, how it *grows* it as you use it.
 
@@ -55,7 +50,7 @@ There are two ways to avoid this trap.
 
 **Eliminating the growth or re-indexing of objects is an easy way of dramatically increasing the speed of R code.**
 
-### Vectorization
+## Vectorization
 I'm sure you've heard the concept that `for` loops in R are slow. Well slow compared to what?  
 
 Let's consider how we could add together a vector of numbers:
@@ -81,7 +76,7 @@ The other benefit that is frequent by-product of vectorization is *legibility* -
 
 Likewise, `conc <- amt*volume` is both easier to read, and clearly expresses the relationship between variables, whether we are multiplying one amt and volume or a columns of amts and volumes.
 
-### Vectorization Tips
+## Vectorization Tips
 * Put as much outside of loops as possible. Ex: If you have a sequence you are applying over and over, create the sequence first and reuse it inside the loop.
 * Make the number of iterations as small as possible. 
 * Don't feel the need to over-vectorize
