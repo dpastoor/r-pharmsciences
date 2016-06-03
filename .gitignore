@@ -1,3 +1,9 @@
 .Rproj.user
 .Rhistory
-.RData
+*_cache
+*_files
+_main.rds
+_book
+*.html
+search_index.json
+libs
