@@ -1,9 +1,4 @@
----
-title: "Data Manipulation"
-author: "Devin"
-date: "May 16, 2015"
-output: pdf_document
----
+# Intro to Data Manipulation
 
 All of you have most likely used every single element of this module, but now we will reassess these operators and behaviors to get a deeper understanding - thus allowing us to wield them more effectively.
 
@@ -201,7 +196,7 @@ hint: look @ ID numbers
 
 The moral of the story, is make sure you know what is going on under the hood - sometimes you can get the 'right' answer for the wrong reasons.
 
-#### Pop quiz question
+### Pop quiz question
 What's wrong with this subsetting command?
 ` dosingdf <- df[unique(df$ID),]`
 
@@ -215,7 +210,7 @@ Our goal for this section is to be able to:
 - reorder and rearrange rows and columns to our needs
 - create new columns
 
-### renaming columns
+## renaming columns
 
 Quick renaming of columns can be easily accomplished using the dplyr `rename` command (originally from plyr) with the structure:
 
@@ -259,7 +254,7 @@ names(Theoph)
 rm(Theoph)
 ```
 
-### reordering rows/columns
+## reordering rows/columns
 When reordering columns in a dataframe you can actually think of it as creating a new dataframe in which the columns get created in the way you order them.
 
 ```{r }
@@ -276,7 +271,7 @@ Just like all other subsetting we've gone over, we can also organize by index
 
 I suggest against it unless you have good reason. (ie you know your code will always be a specific structure) Even then, while faster to type than named indices, it makes legibility more difficult, and modification down the line more tedious trying to keep track.
 
-### Keys
+## Keys
 Similar to columns, rows also have names. As you slice and dice and reorder a dataset it can get pretty ugly, so if the need arises, row names can be rest by `rownames(df) <- NULL`
 
 Rows can always be referred by their name. They are also structurally distinguishable by their content. 
