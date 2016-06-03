@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>R for Pharmaceutical Sciences</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="This book will teach you how to do data science with R">
+  <meta name="generator" content="bookdown 0.0.71 and GitBook 2.6.7">
+
+  <meta property="og:title" content="R for Pharmaceutical Sciences" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://www.devinpastoor.com/r-pharmsciences/" />
+  
+  <meta property="og:description" content="This book will teach you how to do data science with R" />
+  <meta name="github-repo" content="dpastoor/r-pharmsciences" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="R for Pharmaceutical Sciences" />
+  <meta name="twitter:site" content="@devinpastoor" />
+  <meta name="twitter:description" content="This book will teach you how to do data science with R" />
+  
+
+<meta name="author" content="Devin Pastoor">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="control-structures.html">
+<link rel="next" href="thinking-in-r.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="r-pharmsciences.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">R for Pharmaceutical Sciences </a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#how-to-read-this-book"><i class="fa fa-check"></i><b>0.1</b> How to read this book</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="reproducible-research.html"><a href="reproducible-research.html"><i class="fa fa-check"></i><b>1</b> Reproducible Research</a><ul>
+<li class="chapter" data-level="1.1" data-path="reproducible-research.html"><a href="reproducible-research.html#importance-of-reproducible-research"><i class="fa fa-check"></i><b>1.1</b> Importance of Reproducible Research</a></li>
+<li class="chapter" data-level="1.2" data-path="reproducible-research.html"><a href="reproducible-research.html#best-practices-in-reproducible-research"><i class="fa fa-check"></i><b>1.2</b> “Best” Practices in Reproducible Research</a></li>
+<li class="chapter" data-level="1.3" data-path="reproducible-research.html"><a href="reproducible-research.html#reproducible-research-tools"><i class="fa fa-check"></i><b>1.3</b> Reproducible Research Tools</a></li>
+<li class="chapter" data-level="1.4" data-path="reproducible-research.html"><a href="reproducible-research.html#in-line-code"><i class="fa fa-check"></i><b>1.4</b> In-line code</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>2</b> Rmarkdown</a><ul>
+<li class="chapter" data-level="2.1" data-path="rmarkdown.html"><a href="rmarkdown.html#good-practices"><i class="fa fa-check"></i><b>2.1</b> Good Practices</a></li>
+<li class="chapter" data-level="2.2" data-path="rmarkdown.html"><a href="rmarkdown.html#some-gotchas-for-knitting"><i class="fa fa-check"></i><b>2.2</b> Some ‘gotchas’ for knitting</a></li>
+<li class="chapter" data-level="2.3" data-path="rmarkdown.html"><a href="rmarkdown.html#extracting-r-code"><i class="fa fa-check"></i><b>2.3</b> Extracting R Code</a></li>
+<li class="chapter" data-level="2.4" data-path="rmarkdown.html"><a href="rmarkdown.html#chunk-labels"><i class="fa fa-check"></i><b>2.4</b> Chunk Labels</a></li>
+<li class="chapter" data-level="2.5" data-path="rmarkdown.html"><a href="rmarkdown.html#global-options"><i class="fa fa-check"></i><b>2.5</b> Global Options</a></li>
+<li class="chapter" data-level="2.6" data-path="rmarkdown.html"><a href="rmarkdown.html#digits-of-output"><i class="fa fa-check"></i><b>2.6</b> Digits of Output</a></li>
+<li class="chapter" data-level="2.7" data-path="rmarkdown.html"><a href="rmarkdown.html#showinghiding-output-options"><i class="fa fa-check"></i><b>2.7</b> Showing/Hiding Output Options</a></li>
+<li class="chapter" data-level="2.8" data-path="rmarkdown.html"><a href="rmarkdown.html#figures"><i class="fa fa-check"></i><b>2.8</b> Figures</a></li>
+<li class="chapter" data-level="2.9" data-path="rmarkdown.html"><a href="rmarkdown.html#cross-referencing"><i class="fa fa-check"></i><b>2.9</b> Cross-Referencing</a></li>
+<li class="chapter" data-level="2.10" data-path="rmarkdown.html"><a href="rmarkdown.html#adding-tables"><i class="fa fa-check"></i><b>2.10</b> Adding Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html"><i class="fa fa-check"></i><b>3</b> Intro to Data Manipulation</a><ul>
+<li class="chapter" data-level="3.1" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#subsetting"><i class="fa fa-check"></i><b>3.1</b> Subsetting</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#try-it-yourself"><i class="fa fa-check"></i><b>3.1.1</b> Try it yourself</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#logical-subsetting"><i class="fa fa-check"></i><b>3.2</b> Logical Subsetting</a></li>
+<li class="chapter" data-level="3.3" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#common-subsetting-situations-and-some-useful-functions"><i class="fa fa-check"></i><b>3.3</b> Common Subsetting Situations and Some Useful Functions</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#pop-quiz-question"><i class="fa fa-check"></i><b>3.3.1</b> Pop quiz question</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#data-manipulation"><i class="fa fa-check"></i><b>3.4</b> Data Manipulation</a></li>
+<li class="chapter" data-level="3.5" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#renaming-columns"><i class="fa fa-check"></i><b>3.5</b> renaming columns</a></li>
+<li class="chapter" data-level="3.6" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#reordering-rowscolumns"><i class="fa fa-check"></i><b>3.6</b> reordering rows/columns</a></li>
+<li class="chapter" data-level="3.7" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#keys"><i class="fa fa-check"></i><b>3.7</b> Keys</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="core-r.html"><a href="core-r.html"><i class="fa fa-check"></i><b>4</b> Core R</a><ul>
+<li class="chapter" data-level="4.1" data-path="core-r.html"><a href="core-r.html#data-structures"><i class="fa fa-check"></i><b>4.1</b> Data Structures</a></li>
+<li class="chapter" data-level="4.2" data-path="core-r.html"><a href="core-r.html#vectors"><i class="fa fa-check"></i><b>4.2</b> Vectors</a></li>
+<li class="chapter" data-level="4.3" data-path="core-r.html"><a href="core-r.html#coercion"><i class="fa fa-check"></i><b>4.3</b> Coercion</a><ul>
+<li class="chapter" data-level="4.3.1" data-path="core-r.html"><a href="core-r.html#coercion-chain"><i class="fa fa-check"></i><b>4.3.1</b> Coercion chain</a></li>
+</ul></li>
+<li class="chapter" data-level="4.4" data-path="core-r.html"><a href="core-r.html#attributes"><i class="fa fa-check"></i><b>4.4</b> Attributes</a></li>
+<li class="chapter" data-level="4.5" data-path="core-r.html"><a href="core-r.html#lists"><i class="fa fa-check"></i><b>4.5</b> Lists</a></li>
+<li class="chapter" data-level="4.6" data-path="core-r.html"><a href="core-r.html#data-frames"><i class="fa fa-check"></i><b>4.6</b> Data Frames</a></li>
+<li class="chapter" data-level="4.7" data-path="core-r.html"><a href="core-r.html#creation-vs-coercion"><i class="fa fa-check"></i><b>4.7</b> Creation vs Coercion</a></li>
+<li class="chapter" data-level="4.8" data-path="core-r.html"><a href="core-r.html#combining-data-structuresobjects"><i class="fa fa-check"></i><b>4.8</b> Combining Data Structures/Objects</a></li>
+<li class="chapter" data-level="4.9" data-path="core-r.html"><a href="core-r.html#one-last-combining-catch"><i class="fa fa-check"></i><b>4.9</b> One last combining catch</a></li>
+<li class="chapter" data-level="4.10" data-path="core-r.html"><a href="core-r.html#factors"><i class="fa fa-check"></i><b>4.10</b> Factors</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>5</b> Writing Functions</a><ul>
+<li class="chapter" data-level="5.0.1" data-path="writing-functions.html"><a href="writing-functions.html#default-behaviors"><i class="fa fa-check"></i><b>5.0.1</b> Default Behaviors</a></li>
+<li class="chapter" data-level="5.0.2" data-path="writing-functions.html"><a href="writing-functions.html#parameter-matching"><i class="fa fa-check"></i><b>5.0.2</b> Parameter Matching</a></li>
+<li class="chapter" data-level="5.0.3" data-path="writing-functions.html"><a href="writing-functions.html#passing-on-parameters"><i class="fa fa-check"></i><b>5.0.3</b> Passing on parameters</a></li>
+<li class="chapter" data-level="5.0.4" data-path="writing-functions.html"><a href="writing-functions.html#return-values"><i class="fa fa-check"></i><b>5.0.4</b> Return Values</a></li>
+<li class="chapter" data-level="5.1" data-path="writing-functions.html"><a href="writing-functions.html#types-of-functions"><i class="fa fa-check"></i><b>5.1</b> Types of Functions</a><ul>
+<li class="chapter" data-level="5.1.1" data-path="writing-functions.html"><a href="writing-functions.html#anonymous-functions"><i class="fa fa-check"></i><b>5.1.1</b> Anonymous Functions</a></li>
+<li class="chapter" data-level="5.1.2" data-path="writing-functions.html"><a href="writing-functions.html#lists-of-functions"><i class="fa fa-check"></i><b>5.1.2</b> Lists of Functions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="functional-programming.html"><a href="functional-programming.html"><i class="fa fa-check"></i><b>6</b> Functional Programming</a><ul>
+<li class="chapter" data-level="6.0.1" data-path="functional-programming.html"><a href="functional-programming.html#assignment-1"><i class="fa fa-check"></i><b>6.0.1</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="control-structures.html"><a href="control-structures.html"><i class="fa fa-check"></i><b>7</b> Control Structures</a><ul>
+<li class="chapter" data-level="7.1" data-path="control-structures.html"><a href="control-structures.html#if-statements"><i class="fa fa-check"></i><b>7.1</b> IF statements</a></li>
+<li class="chapter" data-level="7.2" data-path="control-structures.html"><a href="control-structures.html#else"><i class="fa fa-check"></i><b>7.2</b> ELSE</a></li>
+<li class="chapter" data-level="7.3" data-path="control-structures.html"><a href="control-structures.html#ifelse"><i class="fa fa-check"></i><b>7.3</b> ifelse</a></li>
+<li class="chapter" data-level="7.4" data-path="control-structures.html"><a href="control-structures.html#loops"><i class="fa fa-check"></i><b>7.4</b> Loops</a></li>
+<li class="chapter" data-level="7.5" data-path="control-structures.html"><a href="control-structures.html#more-for-loop-information"><i class="fa fa-check"></i><b>7.5</b> more For loop information</a></li>
+<li class="chapter" data-level="7.6" data-path="control-structures.html"><a href="control-structures.html#while-loops"><i class="fa fa-check"></i><b>7.6</b> While loops</a></li>
+<li class="chapter" data-level="7.7" data-path="control-structures.html"><a href="control-structures.html#assignments"><i class="fa fa-check"></i><b>7.7</b> Assignments</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="apply-functions.html"><a href="apply-functions.html"><i class="fa fa-check"></i><b>8</b> Apply functions</a><ul>
+<li class="chapter" data-level="8.1" data-path="apply-functions.html"><a href="apply-functions.html#apply"><i class="fa fa-check"></i><b>8.1</b> apply</a></li>
+<li class="chapter" data-level="8.2" data-path="apply-functions.html"><a href="apply-functions.html#lapply"><i class="fa fa-check"></i><b>8.2</b> lapply</a></li>
+<li class="chapter" data-level="8.3" data-path="apply-functions.html"><a href="apply-functions.html#sapply"><i class="fa fa-check"></i><b>8.3</b> sapply</a></li>
+<li class="chapter" data-level="8.4" data-path="apply-functions.html"><a href="apply-functions.html#vapply"><i class="fa fa-check"></i><b>8.4</b> vapply</a></li>
+<li class="chapter" data-level="8.5" data-path="apply-functions.html"><a href="apply-functions.html#tapply"><i class="fa fa-check"></i><b>8.5</b> tapply</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="thinking-in-r.html"><a href="thinking-in-r.html"><i class="fa fa-check"></i><b>9</b> Thinking in R</a><ul>
+<li class="chapter" data-level="9.1" data-path="thinking-in-r.html"><a href="thinking-in-r.html#memory-allocation"><i class="fa fa-check"></i><b>9.1</b> Memory Allocation</a></li>
+<li class="chapter" data-level="9.2" data-path="thinking-in-r.html"><a href="thinking-in-r.html#vectorization"><i class="fa fa-check"></i><b>9.2</b> Vectorization</a></li>
+<li class="chapter" data-level="9.3" data-path="thinking-in-r.html"><a href="thinking-in-r.html#vectorization-tips"><i class="fa fa-check"></i><b>9.3</b> Vectorization Tips</a></li>
+<li class="chapter" data-level="9.4" data-path="thinking-in-r.html"><a href="thinking-in-r.html#indexing"><i class="fa fa-check"></i><b>9.4</b> Indexing</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="common-commands.html"><a href="common-commands.html"><i class="fa fa-check"></i><b>10</b> Common Commands</a><ul>
+<li class="chapter" data-level="10.1" data-path="common-commands.html"><a href="common-commands.html#vocabulary"><i class="fa fa-check"></i><b>10.1</b> Vocabulary</a></li>
+<li class="chapter" data-level="10.2" data-path="common-commands.html"><a href="common-commands.html#the-basics"><i class="fa fa-check"></i><b>10.2</b> The basics</a></li>
+<li class="chapter" data-level="10.3" data-path="common-commands.html"><a href="common-commands.html#common-data-structures"><i class="fa fa-check"></i><b>10.3</b> Common data structures</a></li>
+<li class="chapter" data-level="10.4" data-path="common-commands.html"><a href="common-commands.html#statistics"><i class="fa fa-check"></i><b>10.4</b> Statistics</a></li>
+<li class="chapter" data-level="10.5" data-path="common-commands.html"><a href="common-commands.html#working-with-r"><i class="fa fa-check"></i><b>10.5</b> Working with R</a></li>
+<li class="chapter" data-level="10.6" data-path="common-commands.html"><a href="common-commands.html#io"><i class="fa fa-check"></i><b>10.6</b> I/O</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="inputoutput.html"><a href="inputoutput.html"><i class="fa fa-check"></i><b>11</b> Input/Output</a><ul>
+<li class="chapter" data-level="11.1" data-path="inputoutput.html"><a href="inputoutput.html#fast-io"><i class="fa fa-check"></i><b>11.1</b> Fast I/O</a></li>
+<li class="chapter" data-level="11.2" data-path="inputoutput.html"><a href="inputoutput.html#built-in-io"><i class="fa fa-check"></i><b>11.2</b> Built-in I/O</a></li>
+<li class="chapter" data-level="11.3" data-path="inputoutput.html"><a href="inputoutput.html#some-tidbits"><i class="fa fa-check"></i><b>11.3</b> Some tidbits</a></li>
+<li class="chapter" data-level="11.4" data-path="inputoutput.html"><a href="inputoutput.html#output"><i class="fa fa-check"></i><b>11.4</b> Output</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="inputoutput.html"><a href="inputoutput.html#your-task-1"><i class="fa fa-check"></i><b>11.4.1</b> Your task</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="custom-io.html"><a href="custom-io.html"><i class="fa fa-check"></i><b>12</b> Custom I/O</a></li>
+<li class="chapter" data-level="13" data-path="pragmatic-programming.html"><a href="pragmatic-programming.html"><i class="fa fa-check"></i><b>13</b> Pragmatic Programming</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R for Pharmaceutical Sciences</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="apply-functions" class="section level1">
+<h1><span class="header-section-number">8</span> Apply functions</h1>
+<p>There are a number of <code>apply</code> commands in the R family. Each has different way of handling data</p>
+<p>Additional information can be found in threads on <a href="http://stackoverflow.com/questions/3505701/r-grouping-functions-sapply-vs-lapply-vs-apply-vs-tapply-vs-by-vs-aggrega">stackoverflow</a></p>
+<p>Note - the apply-style commands are <em>not</em> particularly faster than a <em>well-written</em> loop. The benefit is their one-line nature. <a href="http://stackoverflow.com/questions/2275896/is-rs-apply-family-more-than-syntactic-sugar?rq=1">Read some more here</a></p>
+<div id="apply" class="section level2">
+<h2><span class="header-section-number">8.1</span> apply</h2>
+<p>Used to evaluate a function over the margins of a matrix/array. It can apply a function by dimension (row/col).</p>
+<p><code>apply</code> takes the following arguments: * <code>X</code> - input * <code>MARGIN</code> - to distinguish by row or column. <code>1</code> - row, <code>2</code> - column * <code>FUN</code> - function to be applied * <code>...</code> is for other arguments to be passed into fun</p>
+<p>For example to apply the function <code>range</code> across all columns in <code>Theoph</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">apply</span>(Theoph, <span class="dv">2</span>, range)
+<span class="co">#&gt;      Subject Wt     Dose   Time    conc   </span>
+<span class="co">#&gt; [1,] &quot;1&quot;     &quot;54.6&quot; &quot;3.10&quot; &quot; 0.00&quot; &quot; 0.00&quot;</span>
+<span class="co">#&gt; [2,] &quot;9&quot;     &quot;86.4&quot; &quot;5.86&quot; &quot;24.65&quot; &quot;11.40&quot;</span>
+<span class="kw">str</span>(<span class="kw">apply</span>(Theoph, <span class="dv">2</span>, range))
+<span class="co">#&gt;  chr [1:2, 1:5] &quot;1&quot; &quot;9&quot; &quot;54.6&quot; &quot;86.4&quot; &quot;3.10&quot; &quot;5.86&quot; ...</span>
+<span class="co">#&gt;  - attr(*, &quot;dimnames&quot;)=List of 2</span>
+<span class="co">#&gt;   ..$ : NULL</span>
+<span class="co">#&gt;   ..$ : chr [1:5] &quot;Subject&quot; &quot;Wt&quot; &quot;Dose&quot; &quot;Time&quot; ...</span></code></pre></div>
+<p>Notice: - the ‘range’ function does not have ‘()’ around it. - The results are all characters - since <code>apply</code> goes over by dimension and needs a matrix/array, the whole data structure is coerced to the highest level. Since Subject is an ordered factor for <code>Theoph</code> the whole data-frame is coerced to a matrix of type <code>char</code> before the function is applied!</p>
+<p><em>tidbit</em> - apply is a good opportunity to use colMeans/colSums and rowMeans/rowSums - they are significantly faster, especially for large data structures.</p>
+</div>
+<div id="lapply" class="section level2">
+<h2><span class="header-section-number">8.2</span> lapply</h2>
+<p>Works to apply a function to each element in the list and <em>returns a list back</em></p>
+<p><code>lapply</code> takes the following arguments: * <code>X</code> - input * <code>FUN</code> - function to be applied * <code>...</code> is for other arguments to be passed into fun</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(Theoph, range)
+<span class="co">#&gt; $Subject</span>
+<span class="co">#&gt; [1] 6 5</span>
+<span class="co">#&gt; Levels: 6 &lt; 7 &lt; 8 &lt; 11 &lt; 3 &lt; 2 &lt; 4 &lt; 9 &lt; 12 &lt; 10 &lt; 1 &lt; 5</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $Wt</span>
+<span class="co">#&gt; [1] 54.6 86.4</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $Dose</span>
+<span class="co">#&gt; [1] 3.10 5.86</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $Time</span>
+<span class="co">#&gt; [1]  0.0 24.6</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $conc</span>
+<span class="co">#&gt; [1]  0.0 11.4</span></code></pre></div>
+<p>Given that a dataframe is a list with dimensions - lapply can easily step throuh the columns and apply your function and returns a list.</p>
+</div>
+<div id="sapply" class="section level2">
+<h2><span class="header-section-number">8.3</span> sapply</h2>
+<p>sapply is similar to lapply, the biggest difference is it attempts to simplify the result.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">lapply</span>(Theoph, range)
+<span class="co">#&gt; $Subject</span>
+<span class="co">#&gt; [1] 6 5</span>
+<span class="co">#&gt; Levels: 6 &lt; 7 &lt; 8 &lt; 11 &lt; 3 &lt; 2 &lt; 4 &lt; 9 &lt; 12 &lt; 10 &lt; 1 &lt; 5</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $Wt</span>
+<span class="co">#&gt; [1] 54.6 86.4</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $Dose</span>
+<span class="co">#&gt; [1] 3.10 5.86</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $Time</span>
+<span class="co">#&gt; [1]  0.0 24.6</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $conc</span>
+<span class="co">#&gt; [1]  0.0 11.4</span>
+<span class="kw">sapply</span>(Theoph, range)
+<span class="co">#&gt;      Subject   Wt Dose Time conc</span>
+<span class="co">#&gt; [1,]       1 54.6 3.10  0.0  0.0</span>
+<span class="co">#&gt; [2,]      12 86.4 5.86 24.6 11.4</span>
+<span class="kw">str</span>(<span class="kw">lapply</span>(Theoph, range))
+<span class="co">#&gt; List of 5</span>
+<span class="co">#&gt;  $ Subject: Ord.factor w/ 12 levels &quot;6&quot;&lt;&quot;7&quot;&lt;&quot;8&quot;&lt;&quot;11&quot;&lt;..: 1 12</span>
+<span class="co">#&gt;  $ Wt     : num [1:2] 54.6 86.4</span>
+<span class="co">#&gt;  $ Dose   : num [1:2] 3.1 5.86</span>
+<span class="co">#&gt;  $ Time   : num [1:2] 0 24.6</span>
+<span class="co">#&gt;  $ conc   : num [1:2] 0 11.4</span>
+<span class="kw">str</span>(<span class="kw">sapply</span>(Theoph, range))
+<span class="co">#&gt;  num [1:2, 1:5] 1 12 54.6 86.4 3.1 ...</span>
+<span class="co">#&gt;  - attr(*, &quot;dimnames&quot;)=List of 2</span>
+<span class="co">#&gt;   ..$ : NULL</span>
+<span class="co">#&gt;   ..$ : chr [1:5] &quot;Subject&quot; &quot;Wt&quot; &quot;Dose&quot; &quot;Time&quot; ...</span>
+<span class="kw">class</span>(<span class="kw">lapply</span>(Theoph, range))
+<span class="co">#&gt; [1] &quot;list&quot;</span>
+<span class="kw">class</span>(<span class="kw">sapply</span>(Theoph, range))
+<span class="co">#&gt; [1] &quot;matrix&quot;</span>
+<span class="kw">typeof</span>(<span class="kw">lapply</span>(Theoph, range))
+<span class="co">#&gt; [1] &quot;list&quot;</span>
+<span class="kw">typeof</span>(<span class="kw">sapply</span>(Theoph, range))
+<span class="co">#&gt; [1] &quot;double&quot;</span></code></pre></div>
+<p>Generally, the “rules” for <code>sapply</code> can be thought-of as: * Result is a list where every element is length 1 - returns a vector * Result list where every elemtn is same length - returns a matrix * Neither of above - returns list</p>
+</div>
+<div id="vapply" class="section level2">
+<h2><span class="header-section-number">8.4</span> vapply</h2>
+<p>preferred over sapply due to minor speed improvement and better consistency with return types. Can read more about it on <a href="http://stackoverflow.com/questions/12339650/why-is-vapply-safer-than-sapply">stack overflow here</a></p>
+<p>The way <code>vapply</code> works is you also specific implicitly the type of value you expect it to return.</p>
+<p><code>vapply(&lt;values&gt;, &lt;function&gt;, &lt;returntype&gt;)</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(Theoph[<span class="kw">c</span>(<span class="st">&quot;Wt&quot;</span>, <span class="st">&quot;conc&quot;</span>)], summary)
+<span class="co">#&gt;           Wt  conc</span>
+<span class="co">#&gt; Min.    54.6  0.00</span>
+<span class="co">#&gt; 1st Qu. 63.6  2.88</span>
+<span class="co">#&gt; Median  70.5  5.28</span>
+<span class="co">#&gt; Mean    69.6  4.96</span>
+<span class="co">#&gt; 3rd Qu. 74.4  7.14</span>
+<span class="co">#&gt; Max.    86.4 11.40</span>
+
+<span class="kw">vapply</span>(Theoph[<span class="kw">c</span>(<span class="st">&quot;Wt&quot;</span>, <span class="st">&quot;conc&quot;</span>)], summary, <span class="kw">c</span>(<span class="dt">Min. =</span> <span class="dv">0</span>, <span class="st">&quot;1st Qu.&quot;</span> =<span class="st"> </span><span class="dv">0</span>, <span class="dt">Median =</span> <span class="dv">0</span>, <span class="dt">mean =</span> <span class="dv">0</span>,  <span class="st">&quot;3rd Qu.&quot;</span> =<span class="st"> </span><span class="dv">0</span>, <span class="dt">Max. =</span> <span class="dv">0</span>))
+<span class="co">#&gt;           Wt  conc</span>
+<span class="co">#&gt; Min.    54.6  0.00</span>
+<span class="co">#&gt; 1st Qu. 63.6  2.88</span>
+<span class="co">#&gt; Median  70.5  5.28</span>
+<span class="co">#&gt; mean    69.6  4.96</span>
+<span class="co">#&gt; 3rd Qu. 74.4  7.14</span>
+<span class="co">#&gt; Max.    86.4 11.40</span></code></pre></div>
+<p>But unlike sapply, which will give back whatever, vapply will only work if explicity get back what you ask for.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(Theoph, summary)
+<span class="kw">vapply</span>(Theoph, summary, <span class="kw">c</span>(<span class="dt">Min. =</span> <span class="dv">0</span>, <span class="st">&quot;1st Qu.&quot;</span> =<span class="st"> </span><span class="dv">0</span>, <span class="dt">Median =</span> <span class="dv">0</span>, <span class="dt">mean =</span> <span class="dv">0</span>,  <span class="st">&quot;3rd Qu.&quot;</span> =<span class="st"> </span><span class="dv">0</span>, <span class="dt">Max. =</span> <span class="dv">0</span>))</code></pre></div>
+<p>A common pattern if you just expect a character value, or logical value etc. is to use <code>character(1)</code></p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(Theoph[, <span class="kw">c</span>(<span class="st">&quot;Wt&quot;</span>, <span class="st">&quot;conc&quot;</span>, <span class="st">&quot;Time&quot;</span>)], class)
+<span class="co">#&gt;        Wt      conc      Time </span>
+<span class="co">#&gt; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot;</span>
+<span class="kw">vapply</span>(Theoph[, <span class="kw">c</span>(<span class="st">&quot;Wt&quot;</span>, <span class="st">&quot;conc&quot;</span>, <span class="st">&quot;Time&quot;</span>)], class, <span class="kw">character</span>(<span class="dv">1</span>))
+<span class="co">#&gt;        Wt      conc      Time </span>
+<span class="co">#&gt; &quot;numeric&quot; &quot;numeric&quot; &quot;numeric&quot;</span></code></pre></div>
+<p>Again, vapply will catch so wouldn’t run into unexpected output. This can be key when you are testing conditions (eg if class == “<certain_class>”) where the test conditions are very specific, so things like passing a 2 element vector for the class would cause the whole function to error. It is better to catch it early than for things to blow up unexpectedly.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">sapply</span>(Theoph, class)
+<span class="kw">vapply</span>(Theoph, class, <span class="kw">character</span>(<span class="dv">1</span>))</code></pre></div>
+</div>
+<div id="tapply" class="section level2">
+<h2><span class="header-section-number">8.5</span> tapply</h2>
+<p>Used to apply functions to subsets of a vector. I will briefly give some detail, though my person preference is to use <code>dplyr</code> commands with <code>dplyr::group_by</code> when I’m dealing with subsets. It is good to know, however, in case you are unable to install dplyr for whatever reason.</p>
+<p><code>tapply</code> takes the following arguments: * <code>X</code> - input * <code>INDEX</code> is a factor or list of factors * <code>FUN</code> - function to be applied * <code>...</code> is for other arguments to be passed into fun * <code>simplify</code> - logical for whether to simplify result or not</p>
+<p><strong>note</strong>: INDEX must be a factor or list of factors - if not any value passed in will be coerced to factor.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">with</span>(Theoph, <span class="kw">tapply</span>(conc, Wt, mean))
+<span class="co">#&gt; 54.6 58.2 60.5 64.6   65 70.5 72.4 72.7 79.6   80 86.4 </span>
+<span class="co">#&gt; 5.78 5.93 5.41 3.91 4.51 4.68 4.82 4.94 6.44 3.53 4.89</span></code></pre></div>
+<p>Without using <code>with</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">tapply</span>(Theoph$conc, Theoph$Wt, mean)
+<span class="co">#&gt; 54.6 58.2 60.5 64.6   65 70.5 72.4 72.7 79.6   80 86.4 </span>
+<span class="co">#&gt; 5.78 5.93 5.41 3.91 4.51 4.68 4.82 4.94 6.44 3.53 4.89</span></code></pre></div>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="control-structures.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="thinking-in-r.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dpastoor/r-pharmsciences/edit/master/apply-functions.Rmd",
+"text": "Edit"
+},
+"download": ["_main.pdf", "_main.epub"],
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

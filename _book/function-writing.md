@@ -1,0 +1,300 @@
+
+# Writing Functions 
+
+This section will be our bread and butter as functions provide the means for us to start to harness R's power to reduce duplication of code and increase our efficiency.
+
+Functions in R are known as "first class objects" - that is, they can be treated like other R objects.
+
+ They can be:
+ 
+* created without a name
+* assigned to variables
+* stored in lists
+* returned from functions
+* passed as parameters to other functions
+
+Essentially, you can do anything with a function that you can with a vector.
+
+In R, a function is defined with the following syntax:
+
+```
+function(parameters) {body}
+```
+
+* `function` is a reserved word to initialize creation.
+* **parameters** are sets of formal parameter names that will be defined in the function body.
+* **Formal parameters** are parameters included in the function definition
+* The **body** is simply the code that the function will execute
+
+A function can be written in one line as shown above, however, to encapsulate multiple lines brackets `{}` must be used.
+
+A multi-line function could look as such:
+
+```
+function(parameters) {
+    some code
+    some more code
+    even more code
+}
+```
+
+To create a function for future use we must assign it to an object (a variable). For example, we can a simple addition function to examine some features
+
+
+```r
+add_fun <- function(x, y) {
+    x + y
+}
+```
+
+This is a function declaration. We have created a function and given it a name. We can use it by calling it by name and passing some parameters that it requires.
+
+
+```r
+add_fun(1, 5)
+#> [1] 6
+```
+
+There are numer of important behaviors going on 'behind-the-scenes' in even this simple function call.
+
+### Default Behaviors
+
+**Formal parameters** can be soley user defined, they can also have a default value/behavior.
+
+Defaults can be assigned to a parameter with `=` 
+
+Let's update our function to default to `y = 5`
+
+
+```r
+add_fun2 <- function(x, y = 5) x + y
+```
+
+When a default behavior defined, if no object or value is passed to that parameter, the default value is used.
+
+
+```r
+add_fun2(6)
+#> [1] 11
+```
+
+But you can override the default behavior by simply passing in some value
+
+
+```r
+add_fun2(6, 3)
+#> [1] 9
+```
+
+If no default is defined, the function will halt and give you an error requesting what to do with the missing parameter value
+
+
+```r
+add_fun2(y = 3)
+#> Error in add_fun2(y = 3): argument "x" is missing, with no default
+```
+
+When you have multiple parameters - how does a function know which one to use for the various parameters?
+
+### Parameter Matching
+
+Like all things programming - R has specific rules for how it handles parameter matching for functions.
+
+Here is a basic overview:
+
+* parameters can be matched positionally or by name
+* you can mix positional and named matching
+    * when an parameter is matched by name it is "removed" from the parameter list - the remaining parameters are matched by order
+* parameters can be partially matched
+
+The overall order of operations for parameter matching:
+
+1) Check exact match for named parameter
+2) Check for partial match for named parameter
+3) Check for positional match
+4) Any remaining unmatched formal parameters are "taken up" by `...`
+
+**Caveat(s)** 
+
+* Any parameters *after* `...` are only matched exactly
+* Tags partially matching multiple parameters will result in an error
+
+### Passing on parameters
+
+`...` parameter indicates that parameters may be passed on to other (internally called) functions
+
+`...` can be used when extending another function where you don't want to copy all the parameters from the original function. 
+
+
+
+```r
+f <- function(x,...) {
+    print(x)
+    summary(...)
+}
+
+f("It worked! The summary is:", runif(1000, 0, 100), digits=2)
+#> [1] "It worked! The summary is:"
+#>    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+#>       0      24      52      51      76     100
+```
+
+As you can see, all parameters after the first - which was given to `x` - where passed to `summary`.
+
+
+### Return Values
+
+In R after a function completes its code it will return a resulting value. 
+
+
+```r
+f <- function(x) x + 1
+f(2)
+#> [1] 3
+```
+
+`f(2)` returns the result of `x + 1`, which in this case is 3.
+
+By default, **R returns the last evaluated expression**. You can also formally declare what you'd like R to return using `return()`
+
+
+```r
+f <- function(x) return(x + 1)
+```
+
+This can be helpful for legibility when dealing with more complex functions where multiple outcomes are possible. It can also help you "escape" a function early by returning a result as soon as one is relevant
+
+
+```r
+num_sign <- function(x) {
+if (!is.numeric(x)) return("NaN")
+if (x > 0) return("positive")
+if (x <0) return("negative")
+return("Don't know - is it zero?")
+}
+
+num_sign(1)
+#> [1] "positive"
+num_sign(-1)
+#> [1] "negative"
+num_sign("hello")
+#> [1] "NaN"
+num_sign(0)
+#> [1] "Don't know - is it zero?"
+
+num_sign2 <- function(x) {
+if (!is.numeric(x)) "NaN"
+if (x > 0) "positive"
+if (x <0) "negative"
+"Don't know - is it zero?"
+}
+
+num_sign2(1)
+#> [1] "Don't know - is it zero?"
+num_sign2(-1)
+#> [1] "Don't know - is it zero?"
+num_sign2("hello")
+#> [1] "Don't know - is it zero?"
+num_sign2(0)
+#> [1] "Don't know - is it zero?"
+```
+
+One other nomenclature change to note in the above example, is if an `if` statement
+only contains a single statement on a single line, parentheses are not required. 
+
+**R can only return a single result from a function**
+
+To return multiple objects you can combine them into a list or other structure
+
+
+```r
+PK_info <- function(){
+    id <- 1:10
+    id
+    doses <- c(1, 5, 10)
+    doses
+    time <- seq(0, 10, 1)
+    time
+}
+
+PK_info2 <- function(){
+    id <- 1:10
+    doses <- c(1, 5, 10)
+    time <- seq(0, 10, 1)
+    list("id" = id, "doses" = doses, "time" = time)
+}
+
+PK_info() # only returns time
+#>  [1]  0  1  2  3  4  5  6  7  8  9 10
+PK_info2() # returns everything as a list
+#> $id
+#>  [1]  1  2  3  4  5  6  7  8  9 10
+#> 
+#> $doses
+#> [1]  1  5 10
+#> 
+#> $time
+#>  [1]  0  1  2  3  4  5  6  7  8  9 10
+```
+
+
+
+## Types of Functions
+
+3 specific types of functions that you may frequently run-into and/or utilize yourself are:
+
+* Anonymous functions - functions that don't have a name
+
+* Closures - functions written by other functions (will not discuss further)
+
+* Lists of Functions - storing multiple functions in a list
+
+### Anonymous Functions
+
+In R, there is no special syntax for creating functions. Functions, like most things in R, are objects themselves. When you create a function, you are simply assigning a name to the object you are creating. By this behavior you can even create a function and assign it many names.
+
+Sometimes, however, we don't want or need to spend the time assigning a name. You've most likely run across this when reading code that uses commands such as the `apply` family, `do.call`, or with `plyr`. 
+
+Something along the lines of: 
+
+`lapply(df, function(x) length(unique(x)))`
+
+This lapply command could be rewritten with a named function
+
+```
+len_unique <- function(x) length(unique(x))
+lapply(df, len_unique)
+```
+
+However, that is unnecessarily verbose for a one-time function, and can also introduce unnecessary clutter into your environment(s)
+
+Just like other functions, anonymous function have **formals** (parameters), a **body** and are tied to a **parent environment**
+
+
+### Lists of Functions
+
+One way to store sets of functions is to put them in lists. Instead of a single function returning a list of results, you can actually store the functions themselves in a list for later re-use. 
+
+
+```r
+means <- list(
+normal = function(x) mean(x),
+geometric = function(x) ...,
+harmonic = function(x) ...,
+    )
+```
+
+To then call a function you can simply extract it from the list
+
+`means$harmonic(data)` or `means[["geometric"]](data)`
+
+While it might seem awkward there are some situations where lists of functions provide convenience. It also offers a degree of modularity that reduces dependencies.
+
+#### Assignment
+
+- Using a dataset of your choosing write 2-3 functions to create exploratory plots 
+- Add those functions to an `exploratory_plots` list. 
+- Using `lapply` quickly call all the functions on:
+    - the whole dataset
+    - a subset
+

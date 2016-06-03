@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "setwd(\"~/Desktop/ytdl/\")\n\nlibrary(PKPDmisc)\nlibrary(stringr)\n#files <- file.list()\nfiles <- c(\"Lecture 1 - MI250 - Introduction to Bayesian PK-PD Modeling & Simulation (2010)-sWuiJZAgtAs.mp4\" ,\n          \"Lecture 10 - MI250 - Introduction to Bayesian PK-PD Modeling & Simulation (2010)-cAoDkBVbkLU.mp4\")\nfile_nums <- str_extract_all(files, \"\\\\s\\\\d+\\\\s\") %>% str_trim() %>% as_numeric %>% pad_left(2)\n\nnew_names <- paste0(file_nums, \"_\", str_replace_all(files, \"\\\\s\\\\d+\\\\s-\\\\s\", \"_\"))\n\nnew_names <- str_replace_all(new_names, \"\\\\s\\\\(2010.+.mp4\", \".mp4\")\n\n#file.rename(files, new_names)\n\nnew_names\n# [1] \"01_Lecture_MI250 - Introduction to Bayesian PK-PD Modeling & Simulation.mp4\"\n#[2] \"10_Lecture_MI250 - Introduction to Bayesian PK-PD Modeling & Simulation.mp4\"\n\n###\nfiles <- list.files()\nlibrary(PKPDmisc)\nlibrary(stringr)\n\nnew_names <- str_replace_all(files, \"_Lab\", \"b_Lab\")\n\nfile.rename(files, new_names)\n",
+    "created" : 1463059176927.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "138640594",
+    "id" : "BFAB487F",
+    "lastKnownWriteTime" : 4328718344,
+    "last_content_update" : 1463066123616,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "chunk_rendered_width" : "650",
+        "marks" : "<:5,22\n>:7,22",
+        "tempName" : "Untitled3"
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

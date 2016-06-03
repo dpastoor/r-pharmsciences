@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "library(tidyr)\ndat <- read.csv(\"~/Repos/page-r-day1/data/EtaCov_final.csv\")\n\n\ndat <- dat %>% select(-Scenario)\n\nwrite.csv(dat %>% gather(key, value, -ID, -WT, -AGE), \"~/Repos/page-r-day1/data/EtaCov_gathered.csv\", row.names=F, quote=F)\nlibrary(dplyr)\nView(dat)\n",
+    "created" : 1433107581944.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "2327174198",
+    "id" : "85EABAF8",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 0,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "chunk_rendered_width" : "650",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
