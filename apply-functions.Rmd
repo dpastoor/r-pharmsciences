@@ -6,6 +6,25 @@ Additional information can be found in threads on [stackoverflow](http://stackov
 
 Note - the apply-style commands are *not* particularly faster than a *well-written* loop. The benefit is their one-line nature. [Read some more here](http://stackoverflow.com/questions/2275896/is-rs-apply-family-more-than-syntactic-sugar?rq=1)
 
+## lapply
+
+Works to apply a function to each element in the list and *returns a list back*
+
+`lapply` takes the following arguments:
+* `X` - input
+* `FUN` - function to be applied
+* `...` is for other arguments to be passed into fun
+
+```{r }
+lapply(Theoph, range)
+```
+
+Given that a dataframe is a list with dimensions - lapply can easily step through the columns and apply your function and returns a list.
+
+## Additional apply-style functions
+
+The below apply functions are rarely used, as packages such as `dplyr`, `tidyr`, and especially `purrr` have provided expanded functionality and simplified api's to achieve the same outcomes. As such, the below should be used as a reference to understand what those functions do _if you need them_, for example if you are supporting legacy code or need to run code in a highly controlled environment that does not have the aforementioned packages installed.
+
 ## apply
 
 Used to evaluate a function over the margins of a matrix/array. It can apply a function by dimension (row/col).  
@@ -29,21 +48,6 @@ Notice:
 
 *tidbit* - apply is a good opportunity to use colMeans/colSums and rowMeans/rowSums - they are significantly faster, especially for large data structures.
 
-
-## lapply
-
-Works to apply a function to each element in the list and *returns a list back*
-
-`lapply` takes the following arguments:
-* `X` - input
-* `FUN` - function to be applied
-* `...` is for other arguments to be passed into fun
-
-```{r }
-lapply(Theoph, range)
-```
-
-Given that a dataframe is a list with dimensions - lapply can easily step throuh the columns and apply your function and returns a list.
 
 ## sapply
 
