@@ -13,7 +13,8 @@ rmd_files: [
   "thinking-in-r.Rmd",
   "common_commands.Rmd",
   "input-output.Rmd",
-  "custom-io.Rmd"
+  "custom-io.Rmd",
+  "pragmatic_programming.Rmd"
 ]
 
 before_chapter_script: "_common.R"

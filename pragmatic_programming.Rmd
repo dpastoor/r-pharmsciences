@@ -1,8 +1,4 @@
----
-title: "Pragmatic Programming"
-author: "Devin"
-output: html_document
----
+# Pragmatic Programming
 
 Uwe Ligges maxim:
 

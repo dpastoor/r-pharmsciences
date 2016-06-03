@@ -9,7 +9,7 @@ If you have a conceptual idea in your mind about some task, often looking throug
 For example, if you are trying to think of a way to subset to one observation per individual you could go to the data structures and see the `duplicated` option.
 
 
-# Vocabulary
+## Vocabulary
 
 An important part of being a competent R programmer is having a good working vocabulary. Below, I have listed the functions that I believe consistute such a vocabulary. I don't expect you to be intimately familiar with the details of every function, but you should at least be aware that they all exist. 
 
