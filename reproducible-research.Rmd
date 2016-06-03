@@ -1,9 +1,28 @@
----
-title: "Reproducible Research"
-author: "Devin"
-date: "Wednesday, May 15, 2015"
-output: pdf_document
----
+```{r include=FALSE, cache=FALSE}
+set.seed(1014)
+options(digits = 3)
+
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  cache = TRUE
+)
+
+options(dplyr.print_min = 6, dplyr.print_max = 6)
+```
+```{r include=FALSE, cache=FALSE}
+set.seed(1014)
+options(digits = 3)
+
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE,
+  cache = TRUE
+)
+
+options(dplyr.print_min = 6, dplyr.print_max = 6)
+```
+# Reproducible Research
 
 This section covers the conceptual framework behind reproducible research.
 
@@ -30,11 +49,13 @@ One major goal of reproducible research is a final report should not include num
 For example, I would not write: In the Theophylline dataset there are 12 unique subjects. Instead, I can use in-line code evaluation to write:
 
 ```
-There are `r length(unique(Theoph$Subject))` individuals in the dataset
+There are 'r length(unique(Theoph$Subject))' individuals in the dataset
 ```
 
-Which evaluates to:
+using the backtick character '`' (located to the left of the 1 on a US keyboard) instead of quote as shown above.
 
+
+The above evaluates to:
 
 There are `r length(unique(Theoph$Subject))` individuals in the dataset
 
