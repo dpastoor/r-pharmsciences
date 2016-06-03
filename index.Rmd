@@ -1,0 +1,17 @@
+---
+knit: "bookdown::render_book"
+title: "R for Pharmaceutical Sciences"
+author: ["Devin Pastoor"]
+description: "This book will teach you how to do data science with R"
+url: 'http\://www.devinpastoor.com/r-pharmsciences/'
+github-repo: dpastoor/r-pharmsciences
+twitter-handle: devinpastoor
+site: bookdown::bookdown_site
+documentclass: book
+---
+
+# Welcome {-}
+
+Hello there
+
+This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/us/) United States License. 

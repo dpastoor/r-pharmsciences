@@ -1,0 +1,9 @@
+new_session: yes
+
+rmd_files: [
+  "index.Rmd",
+  "core-r.Rmd"
+ 
+]
+
+before_chapter_script: "_common.R"
