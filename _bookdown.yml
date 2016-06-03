@@ -4,7 +4,9 @@ rmd_files: [
   "index.Rmd",
   "reproducible-research.Rmd",
   "rmarkdown.Rmd",
-  "core-r.Rmd"
+  "core-r.Rmd",
+  "function-writing.Rmd",
+  "functional-programming.Rmd"
 ]
 
 before_chapter_script: "_common.R"

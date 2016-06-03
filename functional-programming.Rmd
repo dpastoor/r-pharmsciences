@@ -1,10 +1,4 @@
----
-title: "Functional Programming"
-author: "devin"
-output: html_document
----
-
-## Functional Programming
+# Functional Programming
 
 Functions provide a host of benefits to the user. The allow for efficient automation of repetitive tasks, bundling or common operations and a host of other possibilities.
 

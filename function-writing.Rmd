@@ -1,10 +1,4 @@
----
-title: "Function Writing"
-author: "Devin Pastoor"
-output: pdf_document
----
-
-## Writing Functions 
+# Writing Functions 
 
 This section will be our bread and butter as functions provide the means for us to start to harness R's power to reduce duplication of code and increase our efficiency.
 
