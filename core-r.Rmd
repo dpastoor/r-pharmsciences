@@ -330,7 +330,8 @@ data.frame(id, race)
 ```
 
 
-# Factors
+## Factors
+
 Factors in R are a tricky beast and I haven't spent as much time as I'd like writing up this section so I will give the cliff notes. 
 
 * unordered factors cannot be sorted
