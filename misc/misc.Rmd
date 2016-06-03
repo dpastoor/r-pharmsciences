@@ -1,8 +1,0 @@
----
-title: "misc"
-author: "devin"
-date: "May 29, 2015"
-output: html_document
----
-
-sprintf()

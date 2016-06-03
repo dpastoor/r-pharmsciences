@@ -10,7 +10,10 @@ rmd_files: [
   "functional-programming.Rmd",
   "control-structures.Rmd",
   "apply-functions.Rmd",
-  "thinking-in-r.Rmd"
+  "thinking-in-r.Rmd",
+  "common_commands.Rmd",
+  "input-output.Rmd",
+  "custom-io.Rmd"
 ]
 
 before_chapter_script: "_common.R"

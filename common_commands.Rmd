@@ -1,9 +1,4 @@
----
-title: "Common R Commands"
-author: "Devin"
-date: "Sunday, October 26, 2014"
-output: html_document
----
+# Common Commands
 
 This section is essentially a general compendium of key terms that are important in R
 

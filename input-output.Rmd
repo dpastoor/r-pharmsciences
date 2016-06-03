@@ -1,8 +1,4 @@
----
-title: "I/O"
-author: "Devin Pastoor"
-output: pdf_document
----
+# Input/Output
 
 ## Fast I/O
 
@@ -78,6 +74,7 @@ all_data <- read.table("data.txt", colclasses = classes)
 ```
 
 ## Output
+
 Many of the output settings are similar to input settings. Again, your best bet is to spend a little bit of time checking out the documentation.
 
 A couple values that are relevant and frequently useful:

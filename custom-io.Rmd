@@ -1,9 +1,4 @@
----
-title: "custom I/O"
-author: "devin"
-date: "August 18, 2015"
-output: html_document
----
+# Custom I/O
 
 As an extension of the basic I/O, it is worth mentioning one custom method for I/O,
 processing connections/strings directly. The value is sometimes data is either so messy, or very large but in a format that `readr` and `data.table` won't handle, so you must default to the default slow methods. This technique allows one to manually parse output and clean it up so it is useable by read_csv or another parser. For example, nonmem simulation tables give the following output when simulating with multiple NSUB
