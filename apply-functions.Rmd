@@ -1,8 +1,4 @@
----
-title: "Apply Functions"
-author: "Devin"
-output: pdf_document
----
+# Apply functions
 
 There are a number of `apply` commands in the R family. Each has different way of handling data
 
