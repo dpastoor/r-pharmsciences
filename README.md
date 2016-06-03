@@ -27,3 +27,21 @@ That said, for more experienced programmers, coming from other languages such as
 Even more importantly, it does not make sense for me to re-explain the wheel when Hadley has done such a fantastic job, so I defer to explanations of the finer details of how R works, especially 'under the hood', to his book [advanced R](http://adv-r.had.co.nz/). This book should be 'required' reading to better appreciate how to master R.
 
 This work is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0/us/) United States License. 
+
+
+Rebuild the book for publishing on github via:
+
+```
+git checkout --orphan gh-pages
+git rm -rf .
+
+# create a hidden file .nojekyll
+touch .nojekyll
+git add .nojekyll
+
+# move to top level so github picks up index.html
+mv _book/* .
+
+git commit -m "update book"
+git push origin gh-pages
+```
