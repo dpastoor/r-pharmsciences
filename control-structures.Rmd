@@ -1,9 +1,3 @@
----
-title: "Control Structures"
-author: "Devin Pastoor"
-output: pdf_document
----
-
 # Control Structures 
 
 Control structures offer the ability to control how your code executes and what

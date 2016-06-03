@@ -6,7 +6,8 @@ rmd_files: [
   "rmarkdown.Rmd",
   "core-r.Rmd",
   "function-writing.Rmd",
-  "functional-programming.Rmd"
+  "functional-programming.Rmd",
+  "control-structures.Rmd"
 ]
 
 before_chapter_script: "_common.R"
