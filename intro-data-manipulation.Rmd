@@ -130,10 +130,11 @@ It doesn't give us back the values for the rows where subject equals one, rather
 So, in reality, we are using the logical subsetting rules to extract the rows of the dataframe that come back `TRUE` from our logical query.
 
 We can do this 'by hand' to show whats going on 
+
 ```{r }
-subj <- ifelse(Theoph[["Subject"]] ==1, TRUE, FALSE)
-subj
-Theoph[subj,]
+subj1 <- ifelse(Theoph$Subject == 1, TRUE, FALSE)
+subj1
+Theoph[subj1,]
 ```
 Logical subsetting is at the core of many of R's operations. Any time you're matching, or checking with `is.*` you are using logical subsetting to test the condition you're looking for then returning the `TRUE` results
 
