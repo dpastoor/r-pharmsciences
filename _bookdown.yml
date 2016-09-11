@@ -2,13 +2,13 @@ new_session: yes
 
 rmd_files: [
   "index.Rmd",
-  "reproducible-research.Rmd",
-  "rmarkdown.Rmd",
   "intro-data-manipulation.Rmd",
   "core-r.Rmd",
   "control-structures.Rmd",
   "function-writing.Rmd",
   "functional-programming.Rmd",
+  "reproducible-research.Rmd",
+  "rmarkdown.Rmd",
   "apply-functions.Rmd",
   "thinking-in-r.Rmd",
   "common_commands.Rmd",
