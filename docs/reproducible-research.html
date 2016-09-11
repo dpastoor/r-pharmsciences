@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>R for Pharmaceutical Sciences</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="This book will teach you how to do data science with R">
+  <meta name="generator" content="bookdown 0.0.71 and GitBook 2.6.7">
+
+  <meta property="og:title" content="R for Pharmaceutical Sciences" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="http://www.devinpastoor.com/r-pharmsciences/" />
+  
+  <meta property="og:description" content="This book will teach you how to do data science with R" />
+  <meta name="github-repo" content="dpastoor/r-pharmsciences" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="R for Pharmaceutical Sciences" />
+  <meta name="twitter:site" content="@devinpastoor" />
+  <meta name="twitter:description" content="This book will teach you how to do data science with R" />
+  
+
+<meta name="author" content="Devin Pastoor">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="functional-programming.html">
+<link rel="next" href="rmarkdown.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="r-pharmsciences.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><strong><a href="./">R for Pharmaceutical Sciences </a></strong></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#how-to-read-this-book"><i class="fa fa-check"></i><b>0.1</b> How to read this book</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html"><i class="fa fa-check"></i><b>1</b> Intro to Data Manipulation</a><ul>
+<li class="chapter" data-level="1.1" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#subsetting"><i class="fa fa-check"></i><b>1.1</b> Subsetting</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#try-it-yourself"><i class="fa fa-check"></i><b>1.1.1</b> Try it yourself</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#logical-subsetting"><i class="fa fa-check"></i><b>1.2</b> Logical Subsetting</a></li>
+<li class="chapter" data-level="1.3" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#common-subsetting-situations-and-some-useful-functions"><i class="fa fa-check"></i><b>1.3</b> Common Subsetting Situations and Some Useful Functions</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#pop-quiz-question"><i class="fa fa-check"></i><b>1.3.1</b> Pop quiz question</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#data-manipulation"><i class="fa fa-check"></i><b>1.4</b> Data Manipulation</a></li>
+<li class="chapter" data-level="1.5" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#renaming-columns"><i class="fa fa-check"></i><b>1.5</b> renaming columns</a></li>
+<li class="chapter" data-level="1.6" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#reordering-rowscolumns"><i class="fa fa-check"></i><b>1.6</b> reordering rows/columns</a></li>
+<li class="chapter" data-level="1.7" data-path="intro-to-data-manipulation.html"><a href="intro-to-data-manipulation.html#keys"><i class="fa fa-check"></i><b>1.7</b> Keys</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="core-r.html"><a href="core-r.html"><i class="fa fa-check"></i><b>2</b> Core R</a><ul>
+<li class="chapter" data-level="2.1" data-path="core-r.html"><a href="core-r.html#data-structures"><i class="fa fa-check"></i><b>2.1</b> Data Structures</a></li>
+<li class="chapter" data-level="2.2" data-path="core-r.html"><a href="core-r.html#vectors"><i class="fa fa-check"></i><b>2.2</b> Vectors</a></li>
+<li class="chapter" data-level="2.3" data-path="core-r.html"><a href="core-r.html#coercion"><i class="fa fa-check"></i><b>2.3</b> Coercion</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="core-r.html"><a href="core-r.html#coercion-chain"><i class="fa fa-check"></i><b>2.3.1</b> Coercion chain</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="core-r.html"><a href="core-r.html#attributes"><i class="fa fa-check"></i><b>2.4</b> Attributes</a></li>
+<li class="chapter" data-level="2.5" data-path="core-r.html"><a href="core-r.html#lists"><i class="fa fa-check"></i><b>2.5</b> Lists</a></li>
+<li class="chapter" data-level="2.6" data-path="core-r.html"><a href="core-r.html#data-frames"><i class="fa fa-check"></i><b>2.6</b> Data Frames</a></li>
+<li class="chapter" data-level="2.7" data-path="core-r.html"><a href="core-r.html#creation-vs-coercion"><i class="fa fa-check"></i><b>2.7</b> Creation vs Coercion</a></li>
+<li class="chapter" data-level="2.8" data-path="core-r.html"><a href="core-r.html#combining-data-structuresobjects"><i class="fa fa-check"></i><b>2.8</b> Combining Data Structures/Objects</a></li>
+<li class="chapter" data-level="2.9" data-path="core-r.html"><a href="core-r.html#one-last-combining-catch"><i class="fa fa-check"></i><b>2.9</b> One last combining catch</a></li>
+<li class="chapter" data-level="2.10" data-path="core-r.html"><a href="core-r.html#factors"><i class="fa fa-check"></i><b>2.10</b> Factors</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="control-structures.html"><a href="control-structures.html"><i class="fa fa-check"></i><b>3</b> Control Structures</a><ul>
+<li class="chapter" data-level="3.1" data-path="control-structures.html"><a href="control-structures.html#if-statements"><i class="fa fa-check"></i><b>3.1</b> IF statements</a></li>
+<li class="chapter" data-level="3.2" data-path="control-structures.html"><a href="control-structures.html#else"><i class="fa fa-check"></i><b>3.2</b> ELSE</a></li>
+<li class="chapter" data-level="3.3" data-path="control-structures.html"><a href="control-structures.html#ifelse"><i class="fa fa-check"></i><b>3.3</b> ifelse</a></li>
+<li class="chapter" data-level="3.4" data-path="control-structures.html"><a href="control-structures.html#loops"><i class="fa fa-check"></i><b>3.4</b> Loops</a></li>
+<li class="chapter" data-level="3.5" data-path="control-structures.html"><a href="control-structures.html#more-for-loop-information"><i class="fa fa-check"></i><b>3.5</b> more For loop information</a></li>
+<li class="chapter" data-level="3.6" data-path="control-structures.html"><a href="control-structures.html#while-loops"><i class="fa fa-check"></i><b>3.6</b> While loops</a></li>
+<li class="chapter" data-level="3.7" data-path="control-structures.html"><a href="control-structures.html#assignments"><i class="fa fa-check"></i><b>3.7</b> Assignments</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="writing-functions.html"><a href="writing-functions.html"><i class="fa fa-check"></i><b>4</b> Writing Functions</a><ul>
+<li class="chapter" data-level="4.0.1" data-path="writing-functions.html"><a href="writing-functions.html#default-behaviors"><i class="fa fa-check"></i><b>4.0.1</b> Default Behaviors</a></li>
+<li class="chapter" data-level="4.0.2" data-path="writing-functions.html"><a href="writing-functions.html#parameter-matching"><i class="fa fa-check"></i><b>4.0.2</b> Parameter Matching</a></li>
+<li class="chapter" data-level="4.0.3" data-path="writing-functions.html"><a href="writing-functions.html#passing-on-parameters"><i class="fa fa-check"></i><b>4.0.3</b> Passing on parameters</a></li>
+<li class="chapter" data-level="4.0.4" data-path="writing-functions.html"><a href="writing-functions.html#return-values"><i class="fa fa-check"></i><b>4.0.4</b> Return Values</a></li>
+<li class="chapter" data-level="4.1" data-path="writing-functions.html"><a href="writing-functions.html#types-of-functions"><i class="fa fa-check"></i><b>4.1</b> Types of Functions</a><ul>
+<li class="chapter" data-level="4.1.1" data-path="writing-functions.html"><a href="writing-functions.html#anonymous-functions"><i class="fa fa-check"></i><b>4.1.1</b> Anonymous Functions</a></li>
+<li class="chapter" data-level="4.1.2" data-path="writing-functions.html"><a href="writing-functions.html#lists-of-functions"><i class="fa fa-check"></i><b>4.1.2</b> Lists of Functions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="functional-programming.html"><a href="functional-programming.html"><i class="fa fa-check"></i><b>5</b> Functional Programming</a><ul>
+<li class="chapter" data-level="5.0.1" data-path="functional-programming.html"><a href="functional-programming.html#assignment-1"><i class="fa fa-check"></i><b>5.0.1</b> Assignment</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="reproducible-research.html"><a href="reproducible-research.html"><i class="fa fa-check"></i><b>6</b> Reproducible Research</a><ul>
+<li class="chapter" data-level="6.1" data-path="reproducible-research.html"><a href="reproducible-research.html#importance-of-reproducible-research"><i class="fa fa-check"></i><b>6.1</b> Importance of Reproducible Research</a></li>
+<li class="chapter" data-level="6.2" data-path="reproducible-research.html"><a href="reproducible-research.html#best-practices-in-reproducible-research"><i class="fa fa-check"></i><b>6.2</b> “Best” Practices in Reproducible Research</a></li>
+<li class="chapter" data-level="6.3" data-path="reproducible-research.html"><a href="reproducible-research.html#reproducible-research-tools"><i class="fa fa-check"></i><b>6.3</b> Reproducible Research Tools</a></li>
+<li class="chapter" data-level="6.4" data-path="reproducible-research.html"><a href="reproducible-research.html#in-line-code"><i class="fa fa-check"></i><b>6.4</b> In-line code</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>7</b> Rmarkdown</a><ul>
+<li class="chapter" data-level="7.1" data-path="rmarkdown.html"><a href="rmarkdown.html#good-practices"><i class="fa fa-check"></i><b>7.1</b> Good Practices</a></li>
+<li class="chapter" data-level="7.2" data-path="rmarkdown.html"><a href="rmarkdown.html#some-gotchas-for-knitting"><i class="fa fa-check"></i><b>7.2</b> Some ‘gotchas’ for knitting</a></li>
+<li class="chapter" data-level="7.3" data-path="rmarkdown.html"><a href="rmarkdown.html#extracting-r-code"><i class="fa fa-check"></i><b>7.3</b> Extracting R Code</a></li>
+<li class="chapter" data-level="7.4" data-path="rmarkdown.html"><a href="rmarkdown.html#chunk-labels"><i class="fa fa-check"></i><b>7.4</b> Chunk Labels</a></li>
+<li class="chapter" data-level="7.5" data-path="rmarkdown.html"><a href="rmarkdown.html#global-options"><i class="fa fa-check"></i><b>7.5</b> Global Options</a></li>
+<li class="chapter" data-level="7.6" data-path="rmarkdown.html"><a href="rmarkdown.html#digits-of-output"><i class="fa fa-check"></i><b>7.6</b> Digits of Output</a></li>
+<li class="chapter" data-level="7.7" data-path="rmarkdown.html"><a href="rmarkdown.html#showinghiding-output-options"><i class="fa fa-check"></i><b>7.7</b> Showing/Hiding Output Options</a></li>
+<li class="chapter" data-level="7.8" data-path="rmarkdown.html"><a href="rmarkdown.html#figures"><i class="fa fa-check"></i><b>7.8</b> Figures</a></li>
+<li class="chapter" data-level="7.9" data-path="rmarkdown.html"><a href="rmarkdown.html#adding-tables"><i class="fa fa-check"></i><b>7.9</b> Adding Tables</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="apply-functions.html"><a href="apply-functions.html"><i class="fa fa-check"></i><b>8</b> Apply functions</a><ul>
+<li class="chapter" data-level="8.1" data-path="apply-functions.html"><a href="apply-functions.html#lapply"><i class="fa fa-check"></i><b>8.1</b> lapply</a></li>
+<li class="chapter" data-level="8.2" data-path="apply-functions.html"><a href="apply-functions.html#additional-apply-style-functions"><i class="fa fa-check"></i><b>8.2</b> Additional apply-style functions</a></li>
+<li class="chapter" data-level="8.3" data-path="apply-functions.html"><a href="apply-functions.html#apply"><i class="fa fa-check"></i><b>8.3</b> apply</a></li>
+<li class="chapter" data-level="8.4" data-path="apply-functions.html"><a href="apply-functions.html#sapply"><i class="fa fa-check"></i><b>8.4</b> sapply</a></li>
+<li class="chapter" data-level="8.5" data-path="apply-functions.html"><a href="apply-functions.html#vapply"><i class="fa fa-check"></i><b>8.5</b> vapply</a></li>
+<li class="chapter" data-level="8.6" data-path="apply-functions.html"><a href="apply-functions.html#tapply"><i class="fa fa-check"></i><b>8.6</b> tapply</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="thinking-in-r.html"><a href="thinking-in-r.html"><i class="fa fa-check"></i><b>9</b> Thinking in R</a><ul>
+<li class="chapter" data-level="9.1" data-path="thinking-in-r.html"><a href="thinking-in-r.html#memory-allocation"><i class="fa fa-check"></i><b>9.1</b> Memory Allocation</a></li>
+<li class="chapter" data-level="9.2" data-path="thinking-in-r.html"><a href="thinking-in-r.html#vectorization"><i class="fa fa-check"></i><b>9.2</b> Vectorization</a></li>
+<li class="chapter" data-level="9.3" data-path="thinking-in-r.html"><a href="thinking-in-r.html#vectorization-tips"><i class="fa fa-check"></i><b>9.3</b> Vectorization Tips</a></li>
+<li class="chapter" data-level="9.4" data-path="thinking-in-r.html"><a href="thinking-in-r.html#indexing"><i class="fa fa-check"></i><b>9.4</b> Indexing</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="common-commands.html"><a href="common-commands.html"><i class="fa fa-check"></i><b>10</b> Common Commands</a><ul>
+<li class="chapter" data-level="10.1" data-path="common-commands.html"><a href="common-commands.html#vocabulary"><i class="fa fa-check"></i><b>10.1</b> Vocabulary</a></li>
+<li class="chapter" data-level="10.2" data-path="common-commands.html"><a href="common-commands.html#the-basics"><i class="fa fa-check"></i><b>10.2</b> The basics</a></li>
+<li class="chapter" data-level="10.3" data-path="common-commands.html"><a href="common-commands.html#common-data-structures"><i class="fa fa-check"></i><b>10.3</b> Common data structures</a></li>
+<li class="chapter" data-level="10.4" data-path="common-commands.html"><a href="common-commands.html#statistics"><i class="fa fa-check"></i><b>10.4</b> Statistics</a></li>
+<li class="chapter" data-level="10.5" data-path="common-commands.html"><a href="common-commands.html#working-with-r"><i class="fa fa-check"></i><b>10.5</b> Working with R</a></li>
+<li class="chapter" data-level="10.6" data-path="common-commands.html"><a href="common-commands.html#io"><i class="fa fa-check"></i><b>10.6</b> I/O</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="inputoutput.html"><a href="inputoutput.html"><i class="fa fa-check"></i><b>11</b> Input/Output</a><ul>
+<li class="chapter" data-level="11.1" data-path="inputoutput.html"><a href="inputoutput.html#fast-io"><i class="fa fa-check"></i><b>11.1</b> Fast I/O</a></li>
+<li class="chapter" data-level="11.2" data-path="inputoutput.html"><a href="inputoutput.html#built-in-io"><i class="fa fa-check"></i><b>11.2</b> Built-in I/O</a></li>
+<li class="chapter" data-level="11.3" data-path="inputoutput.html"><a href="inputoutput.html#some-tidbits"><i class="fa fa-check"></i><b>11.3</b> Some tidbits</a></li>
+<li class="chapter" data-level="11.4" data-path="inputoutput.html"><a href="inputoutput.html#output"><i class="fa fa-check"></i><b>11.4</b> Output</a><ul>
+<li class="chapter" data-level="11.4.1" data-path="inputoutput.html"><a href="inputoutput.html#your-task-1"><i class="fa fa-check"></i><b>11.4.1</b> Your task</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="custom-io.html"><a href="custom-io.html"><i class="fa fa-check"></i><b>12</b> Custom I/O</a></li>
+<li class="chapter" data-level="13" data-path="pragmatic-programming.html"><a href="pragmatic-programming.html"><i class="fa fa-check"></i><b>13</b> Pragmatic Programming</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">R for Pharmaceutical Sciences</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="reproducible-research" class="section level1">
+<h1><span class="header-section-number">6</span> Reproducible Research</h1>
+<p>This section covers the conceptual framework behind reproducible research.</p>
+<div id="importance-of-reproducible-research" class="section level2">
+<h2><span class="header-section-number">6.1</span> Importance of Reproducible Research</h2>
+</div>
+<div id="best-practices-in-reproducible-research" class="section level2">
+<h2><span class="header-section-number">6.2</span> “Best” Practices in Reproducible Research</h2>
+<p>Minimal set of guidelines that should be followed to reduce the likelihood of other people being unable to reproduce your results given your document and data.</p>
+<ol style="list-style-type: decimal">
+<li>Avoid absolute paths</li>
+<li>If necessary to set absolute path or read in datasets from other locations, do so in a single, clear location. Minimize the need for people to hunt for locations they need to change paths/pointers.</li>
+<li>Keep each project in a single directory</li>
+<li>For any simulation or number generation <code>set.seed(&lt;number&gt;)</code> to maintain reproducibility</li>
+<li>Use R vanilla to avoid differences with <code>.Rdata</code> or <code>.Rprofile</code></li>
+<li>Include <code>sessionInfo()</code> with <code>cache = FALSE</code> so other people can check if difficulties are due to environment or version differences</li>
+<li>Before generating a final report, clear your environment (and <code>cache()</code> if the full analysis could be completed in a reasonable amount of time) before knitting to make sure the document compiles from scratch properly.</li>
+</ol>
+</div>
+<div id="reproducible-research-tools" class="section level2">
+<h2><span class="header-section-number">6.3</span> Reproducible Research Tools</h2>
+</div>
+<div id="in-line-code" class="section level2">
+<h2><span class="header-section-number">6.4</span> In-line code</h2>
+<p>One major goal of reproducible research is a final report should not include numbers derived from the data. Instead, numbers should be printed as part of the code evaluation.</p>
+<p>For example, I would not write: In the Theophylline dataset there are 12 unique subjects. Instead, I can use in-line code evaluation to write:</p>
+<pre><code>There are &#39;r length(unique(Theoph$Subject))&#39; individuals in the dataset</code></pre>
+<p>using the backtick character ‘`’ (located to the left of the 1 on a US keyboard) instead of quote as shown above.</p>
+<p>The above evaluates to:</p>
+<p>There are 12 individuals in the dataset</p>
+<p>This can be extended to handle output from models, summary statistics, etc.</p>
+<p>Karl Broman also provides a nice <a href="http://kbroman.github.io/knitr_knutshell/">knitr in a nutshell tutorial</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="functional-programming.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="rmarkdown.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/dpastoor/r-pharmsciences/edit/master/reproducible-research.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

@@ -4,6 +4,5 @@
 *_files
 _main.rds
 _book
-*.html
 search_index.json
 libs
