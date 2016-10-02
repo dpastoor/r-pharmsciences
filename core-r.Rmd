@@ -389,9 +389,3 @@ x = factor(x,levels(x)[c(4,5,1:3)])
 
 print(levels(x))  ## Now "Levels: d e a b c"
 ```
-
-
-#### Your task
-
-* Using Theoph dataset, relevel the `Subject` column so the factor levels correspond to the labels
-

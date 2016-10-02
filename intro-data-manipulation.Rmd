@@ -39,7 +39,12 @@ x[c(2, 2)]
 ```
 
 
-By default, `[` will simplify the results to the lowest possible dimensionality. That is, it will reduce any higher dimensionality object to a list or vector. This is because if you select a subset, R will coerce the result to the appropriate dimensionality. We will give an example of this momentarily. To stop this behavior you can use the `drop = FALSE` option.
+By default, `[` will simplify the results to the lowest possible dimensionality. That is, it will reduce any higher dimensionality object to a list or vector. This is because if you select a subset, R will coerce the result to the appropriate dimensionality. We will give an example of this momentarily. To stop this behavior you can use the `drop = FALSE` option. The time you will see this is when only extracting a single column of a dataframe
+
+```{r}
+class(Theoph[, "Subject"]) # simplifies to single vector
+class(Theoph[, "Subject", drop = FALSE]) # retains its nature as a single column data frame
+```
 
 For higher dimensionality objects, rows and columns are subset individually and can be combined in a single call
 
@@ -60,8 +65,8 @@ There are two additional important distinctions between `$` and `[[`
 
 ```{r, eval = F}
 id <- "Subject"
-Theoph$id
-Theoph[[id]]
+Theoph$id ## this does not work
+Theoph[[id]] ## this will properly get the Subject column
 ```
 
 2. `$` allows for partial matching, though this is not advised given code completion engines
@@ -71,17 +76,13 @@ in this day and age
 names(Theoph)
 # $ allows for partial matching
 head(Theoph$Sub)
-head(Theoph$"Subj")
 head(Theoph$Subject)
 
-# '[[' does not
+# '[[' does not, so this will fail
 head(Theoph[["Subj"]])
 ```
 
 Using `$` can lead to unintended consequences if you're looking to grab a column of a certain name that isn't there but a partial match is - especially if this is nested in a function where it isn't clear immediately
-
-
-
 
 `[` and `[[` are both useful for different tasks. In a general sense you use them to accomplish the following:
 
@@ -100,9 +101,6 @@ An easy way to think about it:
 >  "If list `x` is a train carrying objects, then `x[[5]]` is 
 > the object in car 5; `x[4:6]` is a train of cars 4-6." --- 
 > [@RLangTip](http://twitter.com/#!/RLangTip/status/118339256388304896)
-
-
-One thing to note: S3 and S4 objects can override the standard behavior of `[` and `[[` so they behave differently for different types of objects. This can be useful for controlling simplification vs preservation behavior.
 
 ### Try it yourself
 
