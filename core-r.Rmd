@@ -19,11 +19,11 @@ R has a number of ways of storing information. The quick way to visualize the po
 | 2d | Matrix        | Data frame   |
 | nd | Array         |              |
 
-**Homogeneous** - all elements must be of the same type (mode)
+**Homogeneous** - all elements must be of the same type (eg. all character or integer)
 
-**Heterogeneous** - elements can be of different type (mode)
+**Heterogeneous** - elements can be of different type 
 
-A **Type/Mode** indicates how R stores the information in memory
+A **Type** indicates how R stores the information in memory
 
 * numeric
 * double
@@ -33,12 +33,9 @@ A **Type/Mode** indicates how R stores the information in memory
 * list of pointers
 * function
 
-
-The term **Mode** and **Type** are virtually interchangeable - from here out we will use the term **Type** as it is more commonly discussed. ('mode' was inherited mostly from S/S-plus nomenclature/definition)
-
 ## Vectors
 
-Data structures in R can be boiled down to a Vector. The most basic vector is an atomic vector.
+Data structures in R can be boiled down to a vector. The most basic vector is an atomic vector.
 
 Vectors have 4 key components:
 
@@ -66,6 +63,8 @@ length(numeric_vector)
 attributes(numeric_vector)
 ```
 
+**A brief aside**: The important take-away is that there is that storing information in a vector is more than just the values. Instead, additional 'metadata' such as names, the fact that the data structure is a vector, etc, is accessible to you. Though you may not need to leverage this early in your R career directly, this metadata becomes more and more valuable as you start to venture into programming your own utilities, as well as understanding other people's
+
 
 There are two useful functions for handling data structures: `is.*` and `as.*`
 
@@ -89,22 +88,25 @@ typeof(numeric_vector)
 
 ## Coercion
 
-Coercion is a tricky topic in R, that will rear its head throughout one's R career. While it would be extremely difficult to cover all cases in a robust nature, at least understanding a bit of what is going on under the hood can help set expectations, and when odd behavior is occuring think back to 
+As mentioned above, certain data structures, most importantly the vector, can only contain elements of one type. What happens when trying to mix multiple types together? In that case, R must use coercion to translate all the elements to a single type. Coercion is a tricky topic in R, that will rear its head throughout one's R career. While it would be extremely difficult to cover all cases in a robust nature, at least understanding a bit of what is going on under the hood can help set expectations, and when odd behavior is occuring think back to 
 For homogeneous vectors, if you attempt to combine elements of different types, it will pick the class of the first element and coerce all others to that type
 
+For example, below we see a vector that is trying to be created containing a character, numeric, and boolean value. 
 ```{r coercion_ex}
 c("hello", 1, FALSE)
 ```
 
+From the output, we can see that all values are coerced to be character. This coercion to character is the most common, and a rule of thumb is to treat string as the lowest common denominator of multiple types (given at least 1 is a character).
+This coercion to character will show up frequently when reading in
+numeric data that also contains at least 1 non-numeric value. For example, a column of concentration data with a cell containing the word "bql".
+
 Note: If a logical vector is coerced into a numeric TRUE becomes 1 and FALSE becomes 0 - this can be used to 'count' the number of TRUE/FALSES easily using sum()
 
-* vectors can be indexed by position: v[1] refers to the first element of the vector
-* vectors can be indexed by multiple positions using c() - v[c(1,2)] will return a sub-vector the first and second element of 'v'
 
 ### Coercion chain
 
-To help defensively prepare yourself for handling coersion, it is helpful to understand
-the heirarchy of coersion:
+To help defensively prepare yourself for handling coersion,
+it is helpful to understand the heirarchy of coersion:
 
 ```{r}
 fac_test <- factor(c("test1", "test2"))
@@ -115,14 +117,17 @@ str(c(as.factor("test"), TRUE  )) ## numerical representation of factor
 
 ```
 
-Whichever is HIGHEST, all others will be converted to match:
+Whichever is first in the coercion chain, all others will be converted to match:
 
-character <- numeric <- factor <- boolean
+```
+(first):  character <- numeric <- factor <- boolean  :(last)
+```
 
 Notice, one other perculiarity of R, in that the factor test1/test2 are converted to 
 values 1 and 2. This behavior will be discussed in more detail later.
 
 ## Attributes
+
 Attributes are additional metadata about an object. The most common 3 attributes are:
 * `names()` - character vector of element names
 * `dim()` - the structure of the object 
@@ -155,7 +160,7 @@ a[4]
 
 In addition, R can refer to the dimensionality via: 
 
-**DS[row, column]**
+**datastructure[row, column]**
 
 ```{r }
 a <- matrix(1:6)
