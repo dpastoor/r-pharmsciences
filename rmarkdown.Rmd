@@ -98,7 +98,7 @@ One other highly useful argument is `digits`, which passes all values in numeric
 ```{r}
 AUC_df <- data.frame(ID = 1:5, AUC = runif(5, 10, 100))
 kable(AUC_df)
-kable(AUC_df, digits = 3)
+kable(AUC_df, digits = 1)
 ```
 
 The rstudio team has put out a great [cheatsheat](https://www.rstudio.org/links/r_markdown_cheat_sheet) as well as a [reference guide](https://www.rstudio.org/links/r_markdown_reference_guide)
